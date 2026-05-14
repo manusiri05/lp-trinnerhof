@@ -12,277 +12,315 @@
   })(window,document,'script','dataLayer','GTM-W46MXQN8');</script>
   <!-- End Google Tag Manager -->
 
-  <title>Trinnerhof – Urlaub am Bauernhof Südtirol | Natz-Schabs nahe Brixen</title>
-  <meta name="description" content="Hof-Chalets & Ferienwohnungen am denkmalgeschützten Trinnerhof in Natz-Schabs. Zwischen Apfelbäumen und Alpenpanorama – private Wellness, Frühstücksbuffet & Südtiroler Gastfreundschaft." />
+  <title>Trinnerhof Natz-Schabs – Hof-Chalets &amp; Ferienwohnungen in Südtirol</title>
+  <meta name="description" content="Urlaub am Bauernhof in Südtirol – Trinnerhof in Natz-Schabs nahe Brixen. Exklusive Hof-Chalets mit privater Wellness, Ferienwohnungen &amp; Zimmer mit Frühstück. Denkmalgeschützter Erbhof zwischen Apfelbäumen und Alpenpanorama." />
+  <meta name="keywords" content="Trinnerhof, Urlaub Bauernhof Südtirol, Ferienwohnung Natz-Schabs, Hof Chalet Südtirol, Unterkunft Brixen Südtirol, Bauernhofurlaub Eisacktal, Ferienwohnung Brixen, Chalet Urlaub Südtirol, Natz-Schabs Unterkunft" />
   <meta name="robots" content="noindex, nofollow" />
 
-  <link rel="icon" type="image/png" href="https://www.trinnerhof.com/wp-content/uploads/LogoN2-trinnerhof.png" />
+  <link rel="icon" href="https://www.trinnerhof.com/wp-content/uploads/LogoN2-trinnerhof.png" type="image/png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- Flatpickr -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #F7F4EF;
-      --bg-alt:    #EEE9E1;
-      --dark:      #1C1A17;
-      --forest:    #2D2A24;
-      --gold:      #A68A56;
-      --gold-lt:   #C4A97A;
-      --muted:     #6B6358;
-      --border:    #DDD7CC;
-      --white:     #FFFFFF;
-      --serif:     'Lora', Georgia, serif;
-      --sans:      'Inter', system-ui, sans-serif;
-      --max:       1160px;
-      --ph:        clamp(20px, 5vw, 80px);
+      --cream:       #F7F3EC;
+      --cream-dark:  #EDE7D8;
+      --stone:       #A68A56;
+      --stone-dark:  #8A6E3E;
+      --forest:      #2B3322;
+      --forest-mid:  #3A4430;
+      --charcoal:    #1A1A16;
+      --warm-gray:   #7A7268;
+      --white:       #FFFFFF;
+      --font-serif:  'Cormorant Garamond', Georgia, serif;
+      --font-sans:   'Jost', system-ui, sans-serif;
+      --header-h:    72px;
+      --pad:         90px;
+      --max-w:       1180px;
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); color: var(--dark); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-sans); color: var(--charcoal); background: var(--cream); line-height: 1.7; -webkit-font-smoothing: antialiased; }
     img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
+    a   { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin-inline: auto; padding-inline: 24px; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* Buttons */
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--stone); color: var(--white); font-family: var(--font-sans); font-size: 0.80rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s, transform 0.2s; }
+    .btn-primary:hover { background: var(--stone-dark); transform: translateY(-2px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 13px 32px; background: transparent; color: var(--white); font-family: var(--font-sans); font-size: 0.80rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.55); cursor: pointer; transition: border-color 0.25s, background 0.25s; }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* Section helpers */
+    .section-label { font-size: 0.64rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block; }
+    .section-h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; line-height: 1.22; color: var(--forest); margin-bottom: 18px; }
+    .section-text { font-size: 0.90rem; color: var(--warm-gray); line-height: 1.8; }
+    .section-header { text-align: center; max-width: 640px; margin-inline: auto; margin-bottom: 56px; }
 
     /* ── HEADER ── */
-    .lp-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-      height: 70px; display: flex; align-items: center;
-      background: transparent; transition: background .35s, box-shadow .35s;
-    }
-    .lp-header.solid {
-      background: rgba(247,244,239,.97);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 1px 0 var(--border);
-    }
-    .lp-header-inner {
-      width: 100%; max-width: var(--max); margin: 0 auto;
-      padding: 0 var(--ph); display: flex; align-items: center;
-      justify-content: space-between; gap: 20px;
-    }
-    .h-logo img { height: 40px; width: auto; display: block; filter: brightness(0) invert(1); transition: filter .35s; }
-    .lp-header.solid .h-logo img { filter: none; }
-    .h-right { display: flex; align-items: center; gap: 20px; }
-    .h-phone { font-size: .82rem; color: rgba(255,255,255,.8); transition: color .35s; letter-spacing: .02em; }
-    .lp-header.solid .h-phone { color: var(--muted); }
-    .h-cta {
-      display: inline-flex; align-items: center; padding: 10px 24px;
-      background: var(--gold); color: var(--white);
-      font-family: var(--sans); font-size: .73rem; font-weight: 500;
-      letter-spacing: .1em; text-transform: uppercase; border: none; cursor: pointer;
-      transition: background .25s; white-space: nowrap;
-    }
-    .h-cta:hover { background: #8e7545; }
+    #site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--header-h); display: flex; align-items: center; background: rgba(255,255,255,0); transition: background 0.4s, box-shadow 0.4s; }
+    #site-header.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(8px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .header-inner { max-width: var(--max-w); width: 100%; margin-inline: auto; padding-inline: 24px; display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { display: flex; align-items: center; }
+    .logo-img { height: 44px; width: auto; display: block; object-fit: contain; filter: brightness(0) invert(1); transition: filter 0.4s; }
+    #site-header.scrolled .logo-img { filter: brightness(0); }
+    .header-nav { display: flex; align-items: center; gap: 28px; }
+    .header-tel { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.04em; color: rgba(255,255,255,0.9); transition: color 0.4s; }
+    #site-header.scrolled .header-tel { color: var(--warm-gray); }
+    .btn-avail { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; background: var(--stone); color: var(--white); font-family: var(--font-sans); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; border: none; cursor: pointer; transition: background 0.25s, transform 0.2s; }
+    .btn-avail:hover { background: var(--stone-dark); transform: translateY(-1px); }
+    .btn-avail svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.5; flex-shrink: 0; }
 
     /* ── HERO ── */
-    .hero {
-      position: relative; height: 100vh; min-height: 640px; max-height: 1000px;
-      overflow: hidden; display: flex; align-items: flex-end;
-    }
-    .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(15,12,8,.05) 0%, rgba(15,12,8,.22) 40%, rgba(15,12,8,.78) 100%); }
-    .hero-content {
-      position: relative; z-index: 2; max-width: var(--max);
-      margin: 0 auto; padding: 0 var(--ph) 90px; width: 100%;
-    }
-    .hero-eyebrow { font-size: .63rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-lt); margin-bottom: 16px; display: block; }
-    .hero-h1 { font-family: var(--serif); font-size: clamp(2.5rem, 5.5vw, 4.8rem); font-weight: 400; line-height: 1.1; color: var(--white); max-width: 860px; margin-bottom: 20px; }
-    .hero-h1 em { font-style: italic; color: rgba(255,255,255,.85); }
-    .hero-sub { font-size: .93rem; color: rgba(255,255,255,.75); max-width: 540px; line-height: 1.8; margin-bottom: 42px; }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-flex; align-items: center; padding: 15px 36px;
-      background: var(--gold); color: var(--white);
-      font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
-      border: none; cursor: pointer; transition: background .25s;
-    }
-    .btn-primary:hover { background: #8e7545; }
-    .btn-outline {
-      display: inline-flex; align-items: center; padding: 14px 36px;
-      border: 1px solid rgba(255,255,255,.45); color: var(--white);
-      font-size: .75rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase;
-      cursor: pointer; transition: border-color .25s;
-    }
-    .btn-outline:hover { border-color: rgba(255,255,255,.85); }
-    .hero-scroll {
-      position: absolute; bottom: 30px; right: 44px; z-index: 2;
-      display: flex; flex-direction: column; align-items: center; gap: 7px;
-      color: rgba(255,255,255,.4); font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
-    }
-    .hero-scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, rgba(255,255,255,.5), transparent); animation: sc 2s ease-in-out infinite; }
-    @keyframes sc { 0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.35;transform:scaleY(.5)} }
-
-    /* ── USP BAR ── */
-    .uspbar { background: var(--dark); }
-    .uspbar-inner {
-      max-width: var(--max); margin: 0 auto; padding: 0 var(--ph);
-      display: grid; grid-template-columns: repeat(4,1fr);
-    }
-    .usp { padding: 26px 18px; border-right: 1px solid rgba(255,255,255,.07); text-align: center; }
-    .usp:last-child { border-right: none; }
-    .usp-icon { font-size: 1.2rem; margin-bottom: 8px; }
-    .usp-title { font-size: .71rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
-    .usp-text { font-size: .76rem; color: rgba(255,255,255,.48); line-height: 1.5; }
-    @media(max-width:720px){ .uspbar-inner{grid-template-columns:1fr 1fr} .usp{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)} .usp:nth-child(odd){border-right:1px solid rgba(255,255,255,.07)} .usp:last-child{border-bottom:none} }
+    #hero { position: relative; height: 100vh; min-height: 600px; max-height: 960px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,28,16,0.10) 0%, rgba(20,28,16,0.25) 40%, rgba(20,28,16,0.72) 100%); }
+    .hero-content { position: relative; z-index: 2; width: 100%; max-width: var(--max-w); margin-inline: auto; padding: 0 24px 72px; }
+    .hero-badge { display: inline-block; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); border: 1px solid var(--stone); padding: 5px 14px; margin-bottom: 20px; }
+    .hero-h1 { font-family: var(--font-serif); font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 300; line-height: 1.1; color: var(--white); max-width: 760px; margin-bottom: 20px; }
+    .hero-kw { display: block; font-family: var(--font-sans); font-size: 0.90rem; font-weight: 300; letter-spacing: 0.04em; color: rgba(255,255,255,0.78); max-width: 560px; margin-bottom: 36px; }
+    .hero-cta-wrap { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-scroll { position: absolute; bottom: 28px; right: 40px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.55); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; z-index: 2; }
+    .hero-scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent); animation: scrollLine 2s ease-in-out infinite; }
+    @keyframes scrollLine { 0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(0.5);opacity:0.4} }
 
     /* ── INTRO ── */
-    .intro { background: var(--white); padding: 96px var(--ph); }
-    .intro-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .label { font-size: .63rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
-    .h2-serif { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.75rem); font-weight: 400; line-height: 1.22; color: var(--forest); margin-bottom: 22px; }
-    .h2-serif em { font-style: italic; }
-    .body-text { font-size: .9rem; color: var(--muted); line-height: 1.85; margin-bottom: 14px; }
-    .intro-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
-    .intro-list { list-style: none; margin-top: 20px; }
-    .intro-list li { font-size: .88rem; color: var(--forest); padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-    .intro-list li::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-    .intro-list li:last-child { border-bottom: none; }
-    @media(max-width:860px){ .intro-inner{grid-template-columns:1fr;gap:40px} }
+    #intro { background: var(--white); padding: var(--pad) 24px; }
+    .intro-inner { max-width: var(--max-w); margin-inline: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .intro-h2 { font-family: var(--font-serif); font-size: clamp(1.9rem, 3.5vw, 2.9rem); font-weight: 300; line-height: 1.2; color: var(--forest); margin-bottom: 28px; }
+    .intro-text { font-size: 0.92rem; color: var(--warm-gray); line-height: 1.85; margin-bottom: 16px; }
+    .intro-meta { display: flex; gap: 32px; margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--cream-dark); }
+    .meta-num { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 300; color: var(--stone); line-height: 1; display: block; }
+    .meta-label { font-size: 0.70rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-gray); }
+    .intro-image-main { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+    .intro-image-wrap { position: relative; }
+    .intro-image-badge { position: absolute; bottom: -24px; left: -24px; background: var(--forest); color: var(--white); padding: 18px 22px; max-width: 220px; }
+    .badge-icon-svg { width: 28px; height: 28px; margin-bottom: 6px; fill: var(--stone); }
+    .badge-text { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.1em; line-height: 1.5; }
 
-    /* ── UNTERKÜNFTE ── */
-    .units { background: var(--bg); padding: 96px var(--ph); }
-    .units-inner { max-width: var(--max); margin: 0 auto; }
-    .section-head { margin-bottom: 52px; }
-    .section-h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.75rem); font-weight: 400; line-height: 1.2; color: var(--forest); margin-bottom: 12px; }
-    .section-h2 em { font-style: italic; }
-    .section-desc { font-size: .9rem; color: var(--muted); line-height: 1.8; max-width: 600px; }
+    /* ── USP ROW ── */
+    #usps { background: var(--cream); padding: 52px 24px; }
+    .usps-inner { max-width: var(--max-w); margin-inline: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .usp-item { background: var(--white); padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; border-bottom: 3px solid transparent; transition: border-color 0.3s; }
+    .usp-item:hover { border-color: var(--stone); }
+    .usp-icon { width: 32px; height: 32px; flex-shrink: 0; }
+    .usp-icon path, .usp-icon rect, .usp-icon circle, .usp-icon polyline, .usp-icon line, .usp-icon ellipse { stroke: var(--stone); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .usp-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--forest); }
+    .usp-desc { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.65; }
 
-    /* Category Tabs */
-    .unit-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 48px; }
-    .unit-tab {
-      padding: 12px 26px; font-size: .73rem; font-weight: 500; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--muted); cursor: pointer;
-      border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color .2s, border-color .2s;
-      background: none; border-top: none; border-left: none; border-right: none; font-family: var(--sans);
-    }
-    .unit-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
-    .unit-tab:hover:not(.active) { color: var(--dark); }
+    /* ── FEATURE ACCORDION ── */
+    #features { background: var(--cream-dark); padding: var(--pad) 24px; }
+    .accordion-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: var(--max-w); margin-inline: auto; overflow: hidden; }
+    .acc-tile { position: relative; overflow: hidden; cursor: pointer; height: 520px; }
+    .acc-tile:hover .acc-bg { transform: scale(1.05); }
+    .acc-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.7s ease; }
+    .acc-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,28,16,0.86) 0%, rgba(20,28,16,0.14) 60%); transition: background 0.4s; }
+    .acc-tile:hover .acc-overlay { background: linear-gradient(to top, rgba(20,28,16,0.93) 0%, rgba(20,28,16,0.28) 60%); }
+    .acc-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 36px 28px; color: var(--white); }
+    .acc-num { font-family: var(--font-serif); font-size: 3rem; font-weight: 300; color: var(--stone); opacity: 0.7; line-height: 1; margin-bottom: 8px; }
+    .acc-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; line-height: 1.25; margin-bottom: 14px; }
+    .acc-body { font-size: 0.84rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.82); max-height: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.4s; opacity: 0; }
+    .acc-tile:hover .acc-body, .acc-tile.active .acc-body { max-height: 160px; opacity: 1; }
+    .acc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stone); max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.4s 0.1s; }
+    .acc-tile:hover .acc-link, .acc-tile.active .acc-link { max-height: 48px; opacity: 1; }
 
-    .unit-panel { display: none; }
-    .unit-panel.active { display: block; }
+    /* ── PHILOSOPHY ── */
+    #philosophy { position: relative; padding: 100px 24px; overflow: hidden; }
+    .philosophy-bg { position: absolute; inset: 0; background-image: url('https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhofurlaub-brixen-eisacktal.jpg'); background-size: cover; background-position: center; filter: brightness(0.30); }
+    .philosophy-inner { position: relative; z-index: 2; max-width: 780px; margin-inline: auto; text-align: center; }
+    .quote-mark { font-family: var(--font-serif); font-size: 5rem; color: var(--stone); line-height: 0.6; display: block; margin-bottom: 20px; opacity: 0.7; }
+    .philosophy-quote { font-family: var(--font-serif); font-size: clamp(1.4rem, 2.8vw, 2.1rem); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--white); margin-bottom: 32px; }
+    .philosophy-attr { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone); }
 
-    .units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .units-grid.three { grid-template-columns: repeat(3,1fr); gap: 32px; }
-    .unit-card { background: var(--white); overflow: hidden; }
-    .unit-img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
-    .unit-body { padding: 26px 26px 28px; }
-    .unit-cat { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
-    .unit-h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; color: var(--dark); margin-bottom: 10px; }
-    .unit-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-    .unit-tag { font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bg-alt); padding: 4px 12px; }
-    .unit-text { font-size: .86rem; color: var(--muted); line-height: 1.75; margin-bottom: 18px; }
-    .unit-price { display: flex; align-items: baseline; gap: 6px; margin-top: 4px; }
-    .unit-price-val { font-family: var(--serif); font-size: 2rem; font-weight: 400; color: var(--gold); }
-    .unit-price-unit { font-size: .78rem; color: var(--muted); }
-    @media(max-width:860px){ .units-grid{grid-template-columns:1fr;gap:28px} .units-grid.three{grid-template-columns:1fr 1fr;gap:24px} }
-    @media(max-width:560px){ .units-grid.three{grid-template-columns:1fr} }
+    /* ── RATINGS ── */
+    #bewertungen { background: var(--white); padding: 72px 24px; }
+    .ratings-inner { max-width: var(--max-w); margin-inline: auto; }
+    .ratings-label { font-size: 0.64rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); text-align: center; margin-bottom: 48px; }
+    .ratings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .rating-card { background: var(--cream); padding: 36px 28px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; transition: background 0.3s; }
+    .rating-card:hover { background: var(--cream-dark); }
+    .rating-platform { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-gray); }
+    .rating-score { font-family: var(--font-serif); font-size: 3.4rem; font-weight: 300; color: var(--forest); line-height: 1; }
+    .rating-stars { display: flex; gap: 3px; color: var(--stone); font-size: 1rem; }
+    .rating-divider { width: 32px; height: 1px; background: var(--stone); opacity: 0.4; }
+    .rating-text { font-family: var(--font-serif); font-size: 1rem; font-style: italic; color: var(--forest); line-height: 1.4; }
+    .rating-count { font-size: 0.75rem; color: var(--warm-gray); }
 
-    /* ── FULLWIDTH SPLIT IMAGE ── */
-    .split { background: var(--white); padding: 96px var(--ph); }
-    .split-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-    .split-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-    .split-text .body-text { margin-bottom: 12px; }
-    .feat-list { list-style: none; margin-top: 24px; }
-    .feat-list li { font-size: .87rem; color: var(--forest); padding: 9px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 12px; line-height: 1.5; }
-    .feat-list li::before { content: '✓'; color: var(--gold); font-weight: 600; flex-shrink: 0; margin-top: 1px; }
-    .feat-list li:last-child { border-bottom: none; }
-    @media(max-width:860px){ .split-inner{grid-template-columns:1fr;gap:36px} }
+    /* ── ROOM SLIDER ── */
+    #zimmer { background: var(--forest); padding: var(--pad) 0 0; }
+    #zimmer .section-header { padding-inline: 24px; }
+    #zimmer .section-h2 { color: var(--white); }
+    #zimmer .section-label { color: var(--stone); }
+    #zimmer .section-text  { color: rgba(255,255,255,0.60); }
+    .slider-wrap { position: relative; overflow: hidden; margin-top: 52px; }
+    .slider-track { display: flex; transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .slide { flex: 0 0 100%; display: grid; grid-template-columns: 55% 45%; min-height: 480px; }
+    .slide-img { overflow: hidden; position: relative; }
+    .slide-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+    .slide-img:hover img { transform: scale(1.04); }
+    .slide-body { background: var(--forest-mid); padding: 52px 52px 52px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    .slide-tag { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); }
+    .slide-name { font-family: var(--font-serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 400; color: var(--white); line-height: 1.2; }
+    .slide-desc { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.70); line-height: 1.75; }
+    .slide-meta { display: flex; gap: 24px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.10); }
+    .slide-meta-item { display: flex; flex-direction: column; gap: 3px; }
+    .meta-val { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 300; color: var(--stone); line-height: 1; }
+    .meta-lbl { font-size: 0.68rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.40); }
+    .slide-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border: 1px solid rgba(166,138,86,0.5); color: var(--stone); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; align-self: flex-start; transition: background 0.25s, border-color 0.25s, color 0.25s; }
+    .slide-cta:hover { background: var(--stone); border-color: var(--stone); color: var(--white); }
+    .slider-nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 48px; background: rgba(0,0,0,0.18); }
+    .slider-dots { display: flex; gap: 10px; }
+    .slider-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); border: none; cursor: pointer; transition: background 0.3s, transform 0.3s; padding: 0; }
+    .slider-dot.active { background: var(--stone); transform: scale(1.25); }
+    .slider-arrows { display: flex; gap: 8px; }
+    .slider-btn { width: 44px; height: 44px; background: transparent; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.25s, color 0.25s, background 0.25s; }
+    .slider-btn:hover { border-color: var(--stone); color: var(--stone); background: rgba(166,138,86,0.1); }
+    .slider-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .slider-counter { font-family: var(--font-serif); font-size: 0.90rem; color: rgba(255,255,255,0.40); letter-spacing: 0.08em; }
+    .slider-counter span { color: var(--stone); }
 
-    /* ── LEISTUNGEN ── */
-    .leistungen { background: var(--bg-alt); padding: 88px var(--ph); }
-    .leistungen-inner { max-width: var(--max); margin: 0 auto; }
-    .leist-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-top: 52px; }
-    .leist-card { background: var(--white); padding: 30px 26px; border-bottom: 2px solid transparent; transition: border-color .25s; }
-    .leist-card:hover { border-color: var(--gold); }
-    .leist-icon { font-size: 1.3rem; margin-bottom: 14px; }
-    .leist-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--dark); margin-bottom: 9px; }
-    .leist-text { font-size: .83rem; color: var(--muted); line-height: 1.7; }
-    @media(max-width:960px){ .leist-grid{grid-template-columns:1fr 1fr} }
-    @media(max-width:540px){ .leist-grid{grid-template-columns:1fr} }
+    /* ── EXPERIENCES ── */
+    #erlebnisse { background: var(--white); padding: var(--pad) 24px; }
+    .exp-grid { max-width: var(--max-w); margin-inline: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; }
+    .exp-item { display: flex; flex-direction: column; gap: 14px; padding: 28px 22px; background: var(--cream); border-left: 3px solid var(--stone); transition: transform 0.3s; }
+    .exp-item:hover { transform: translateY(-4px); }
+    .exp-icon-wrap { width: 36px; height: 36px; }
+    .exp-icon-wrap path, .exp-icon-wrap circle, .exp-icon-wrap polyline, .exp-icon-wrap line, .exp-icon-wrap rect, .exp-icon-wrap ellipse { stroke: var(--stone); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .exp-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--forest); }
+    .exp-desc { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.7; }
 
     /* ── REVIEWS ── */
-    .reviews { background: var(--white); padding: 96px var(--ph); }
-    .reviews-inner { max-width: var(--max); margin: 0 auto; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 52px; }
-    .rev-card { background: var(--bg); padding: 30px 28px; border-top: 3px solid var(--gold); }
-    .rev-stars { color: var(--gold); font-size: .9rem; letter-spacing: 2px; margin-bottom: 14px; }
-    .rev-text { font-family: var(--serif); font-style: italic; font-size: .93rem; color: var(--forest); line-height: 1.75; margin-bottom: 16px; }
-    .rev-author { font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .rev-source { font-size: .69rem; color: var(--gold); margin-top: 2px; }
-    @media(max-width:860px){ .reviews-grid{grid-template-columns:1fr 1fr} }
-    @media(max-width:560px){ .reviews-grid{grid-template-columns:1fr} }
+    #reviews { background: var(--cream); padding: var(--pad) 24px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+    .review-card { background: var(--white); padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; border-bottom: 3px solid transparent; transition: border-color 0.3s, transform 0.3s; }
+    .review-card:hover { border-color: var(--stone); transform: translateY(-4px); }
+    .review-stars { display: flex; gap: 3px; color: var(--stone); font-size: 0.85rem; }
+    .review-text { font-family: var(--font-serif); font-size: 1.02rem; font-style: italic; line-height: 1.65; color: var(--forest); flex: 1; }
+    .review-author { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--cream-dark); }
+    .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 0.75rem; font-weight: 500; flex-shrink: 0; }
+    .review-name { font-size: 0.80rem; font-weight: 500; color: var(--charcoal); }
+    .review-meta { font-size: 0.70rem; color: var(--warm-gray); }
 
-    /* ── PREISE & KONDITIONEN ── */
-    .preise { background: var(--bg-alt); padding: 88px var(--ph); }
-    .preise-inner { max-width: var(--max); margin: 0 auto; }
-    .preise-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 52px; }
-    .preise-block-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--forest); margin-bottom: 18px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
-    .kond-list { list-style: none; }
-    .kond-list li { font-size: .87rem; color: var(--muted); padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; line-height: 1.55; }
-    .kond-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; font-size: .8rem; margin-top: 2px; }
-    .kond-list li:last-child { border-bottom: none; }
-    .storno-list { list-style: none; }
-    .storno-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
-    .storno-item:last-child { border-bottom: none; }
-    .storno-pct { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: var(--gold); flex-shrink: 0; min-width: 60px; line-height: 1; }
-    .storno-desc { font-size: .86rem; color: var(--muted); line-height: 1.6; }
-    .storno-desc strong { color: var(--forest); font-weight: 500; display: block; margin-bottom: 2px; }
-    .kinder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
-    .kinder-item { background: var(--white); padding: 16px 18px; border-left: 3px solid var(--gold); }
-    .kinder-age { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
-    .kinder-price { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--dark); line-height: 1; margin-bottom: 2px; }
-    .kinder-unit { font-size: .74rem; color: var(--muted); }
-    @media(max-width:860px){ .preise-layout{grid-template-columns:1fr;gap:40px} }
+    /* ── GALLERY ── */
+    #impressionen { background: var(--cream-dark); padding: var(--pad) 24px; }
+    .gallery-grid { max-width: var(--max-w); margin-inline: auto; margin-top: 52px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+    .gal-item { overflow: hidden; position: relative; }
+    .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .gal-item:hover img { transform: scale(1.05); }
+    .gal-item:nth-child(1) { grid-column: span 7; aspect-ratio: 16/9; }
+    .gal-item:nth-child(2) { grid-column: span 5; aspect-ratio: 16/9; }
+    .gal-item:nth-child(3) { grid-column: span 4; aspect-ratio: 4/3; }
+    .gal-item:nth-child(4) { grid-column: span 4; aspect-ratio: 4/3; }
+    .gal-item:nth-child(5) { grid-column: span 4; aspect-ratio: 4/3; }
+    .gal-item:nth-child(6) { grid-column: span 6; aspect-ratio: 16/9; }
+    .gal-item:nth-child(7) { grid-column: span 6; aspect-ratio: 16/9; }
 
-    /* ── BOOKING ── */
-    .booking { background: var(--dark); padding: 96px var(--ph); }
-    .booking-inner { max-width: var(--max); margin: 0 auto; }
-    .booking-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: start; }
-    .booking-head .label { color: var(--gold-lt); }
-    .booking-h2 { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 14px; }
-    .booking-h2 em { font-style: italic; }
-    .booking-sub { font-size: .9rem; color: rgba(255,255,255,.55); max-width: 520px; line-height: 1.75; margin-bottom: 32px; }
-    .booking-info { list-style: none; }
-    .booking-info li { font-size: .85rem; color: rgba(255,255,255,.58); padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.07); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
-    .booking-info li::before { content: '✓'; color: var(--gold-lt); font-size: .75rem; flex-shrink: 0; margin-top: 2px; }
-    .booking-info li:last-child { border-bottom: none; }
-    @media(max-width:860px){ .booking-layout{grid-template-columns:1fr;gap:44px} }
-
-    /* Form integration */
-    .form-wrap {
-      background: var(--white); border-radius: 0; padding: 0;
-    }
-    .form-wrap .form-container {
-      box-shadow: none !important; border-radius: 0 !important;
-      padding: 32px 28px !important; background: var(--white) !important;
-      max-width: 100% !important; margin: 0 !important;
-    }
+    /* ── CTA + FORM ── */
+    #anfrage { background: var(--cream); padding: var(--pad) 24px; }
+    .cta-inner { max-width: 860px; margin-inline: auto; text-align: center; }
+    .cta-h2 { font-family: var(--font-serif); font-size: clamp(1.9rem, 3.5vw, 3rem); font-weight: 300; color: var(--forest); margin-bottom: 18px; line-height: 1.2; }
+    .cta-text { font-size: 0.92rem; color: var(--warm-gray); line-height: 1.8; margin-bottom: 40px; }
+    .cta-contact-bar { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 28px; align-items: center; background: var(--white); padding: 28px 36px; margin-bottom: 32px; }
+    .cta-divider { background: var(--cream-dark); height: 100%; min-height: 40px; }
+    .contact-method { text-align: center; }
+    .contact-icon-svg { width: 22px; height: 22px; margin: 0 auto 8px; }
+    .contact-icon-svg path, .contact-icon-svg circle, .contact-icon-svg polyline, .contact-icon-svg rect { stroke: var(--stone); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--stone); margin-bottom: 6px; display: block; }
+    .contact-value { font-family: var(--font-serif); font-size: 1.15rem; color: var(--forest); }
+    .contact-note { font-size: 0.75rem; color: var(--warm-gray); margin-top: 4px; }
+    .form-wrap { background: var(--white); padding: 40px 44px; text-align: left; }
+    .form-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 400; color: var(--forest); margin-bottom: 8px; }
+    .form-subtitle { font-size: 0.82rem; color: var(--warm-gray); margin-bottom: 28px; }
+    .custom-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .full-width { grid-column: span 2; }
+    .custom-form label { display: block; margin-bottom: 5px; font-weight: 500; color: var(--charcoal); font-size: 0.82rem; letter-spacing: 0.03em; }
+    .req::after { content: " *"; color: var(--stone-dark); }
+    .custom-form input, .custom-form select, .custom-form textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--cream-dark); border-radius: 0; font-size: 0.92rem; font-family: var(--font-sans); background: var(--white); color: var(--charcoal); transition: border-color 0.2s, box-shadow 0.2s; }
+    .custom-form input:focus, .custom-form select:focus, .custom-form textarea:focus { border-color: var(--stone); outline: none; box-shadow: 0 0 0 2px rgba(166,138,86,0.15); }
+    .custom-form input.error, .custom-form select.error { border-color: #c0392b !important; }
+    .phone-row { display: flex; gap: 6px; }
+    .phone-row select { flex: 0 0 auto; width: 118px; font-size: 0.88rem; }
+    .phone-row input  { flex: 1; }
+    .child-age-field { display: none; }
+    .privacy-row { grid-column: span 2; display: flex; align-items: flex-start; gap: 10px; padding: 14px 16px; background: var(--cream); border: 1px solid var(--cream-dark); }
+    .privacy-row input[type="checkbox"] { width: 18px; min-width: 18px; height: 18px; margin-top: 2px; cursor: pointer; accent-color: var(--stone); }
+    .privacy-row label { font-size: 0.80rem; color: var(--warm-gray); font-weight: 400; margin: 0; cursor: pointer; line-height: 1.5; }
+    .privacy-row label a { color: var(--stone); text-decoration: underline; }
+    .field-error { font-size: 0.76rem; color: #c0392b; margin-top: 3px; display: none; }
+    .submit-btn { grid-column: span 2; background: var(--stone); color: var(--white); padding: 15px; border: none; cursor: pointer; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 6px; transition: background 0.2s, transform 0.2s; }
+    .submit-btn:hover { background: var(--stone-dark); transform: translateY(-1px); }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+    .success-msg { display: none; grid-column: span 2; background: #e8f5e9; border: 1px solid #a5d6a7; padding: 16px; color: #2e7d32; font-size: 0.92rem; font-weight: 500; text-align: center; line-height: 1.5; }
 
     /* ── FOOTER ── */
-    .lp-footer { background: var(--forest); padding: 48px var(--ph) 32px; }
-    .lp-footer-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-logo img { height: 44px; width: auto; filter: brightness(0) invert(1) opacity(.7); margin-bottom: 14px; }
-    .footer-tagline { font-size: .8rem; color: rgba(255,255,255,.45); line-height: 1.65; }
-    .footer-col-title { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-lt); margin-bottom: 16px; display: block; }
-    .footer-col a, .footer-col p { font-size: .83rem; color: rgba(255,255,255,.55); line-height: 2; display: block; transition: color .2s; }
-    .footer-col a:hover { color: rgba(255,255,255,.9); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 22px; text-align: center; font-size: .76rem; color: rgba(255,255,255,.3); }
-    @media(max-width:720px){ .lp-footer-inner{grid-template-columns:1fr;gap:28px} }
+    #footer { background: var(--charcoal); padding: 56px 24px 32px; }
+    .footer-inner { max-width: var(--max-w); margin-inline: auto; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; color: var(--white); }
+    .footer-logo-sub { font-size: 0.62rem; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .footer-tagline { font-size: 0.80rem; color: rgba(255,255,255,0.35); line-height: 1.7; margin-top: 14px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-link { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; transition: border-color 0.25s, color 0.25s; }
+    .social-link:hover { border-color: var(--stone); color: var(--stone); }
+    .footer-col-title { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); margin-bottom: 18px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.40); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .seo-keywords { font-size: 0.74rem; color: rgba(255,255,255,0.15); line-height: 1.8; margin-top: 16px; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; font-size: 0.72rem; color: rgba(255,255,255,0.22); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { color: rgba(255,255,255,0.22); transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.55); }
 
-    /* ── MOBILE ── */
-    @media(max-width:540px){
-      .h-phone { display: none; }
-      .hero-btns { flex-direction: column; gap: 10px; }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .intro-inner { grid-template-columns: 1fr; }
+      .intro-image-wrap { display: none; }
+      .accordion-grid { grid-template-columns: 1fr; }
+      .acc-tile { height: 340px; }
+      .acc-body { max-height: 120px !important; opacity: 1 !important; }
+      .acc-link { max-height: 48px !important; opacity: 1 !important; }
+      .usps-inner { grid-template-columns: repeat(2, 1fr); }
+      .ratings-grid { grid-template-columns: 1fr; gap: 2px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .slide { grid-template-columns: 1fr; min-height: auto; }
+      .slide-img { aspect-ratio: 16/9; }
+      .exp-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gal-item { grid-column: span 1 !important; aspect-ratio: 1/1 !important; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      :root { --pad: 60px; }
+      .header-tel { display: none; }
+      .hero-h1 { font-size: 2.2rem; }
+      .slide-body { padding: 32px 24px; }
+      .slider-nav { padding: 20px 24px; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .cta-contact-bar { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+      .cta-divider { display: none; }
+      .form-wrap { padding: 28px 24px; }
+      .custom-form { grid-template-columns: 1fr; }
+      .full-width, .privacy-row, .submit-btn, .success-msg { grid-column: span 1; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-cta-wrap { flex-direction: column; }
       .btn-primary, .btn-outline { width: 100%; justify-content: center; }
-      .unit-tabs { overflow-x: auto; white-space: nowrap; }
+      .btn-avail { padding: 10px 14px; font-size: 0.72rem; letter-spacing: 0.1em; }
     }
   </style>
 </head>
@@ -293,645 +331,664 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- ═══════════ HEADER ═══════════ -->
-<header class="lp-header" id="lpHeader">
-  <div class="lp-header-inner">
-    <a href="#" class="h-logo">
-      <img src="https://www.trinnerhof.com/wp-content/uploads/LogoN2-trinnerhof.png" alt="Trinnerhof" />
+<!-- ── HEADER ── -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="header-logo" aria-label="Trinnerhof Natz-Schabs">
+      <img class="logo-img" src="https://www.trinnerhof.com/wp-content/uploads/LogoN2-trinnerhof.png" alt="Trinnerhof" />
     </a>
-    <div class="h-right">
-      <a href="tel:+390472412238" class="h-phone">+39 0472 412238</a>
-      <a href="#anfrage" class="h-cta">Jetzt anfragen</a>
-    </div>
+    <nav class="header-nav">
+      <a href="tel:+390472412238" class="header-tel">+39 0472 412238</a>
+      <a href="#bookingForm" class="btn-avail">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="12" height="11" rx="1"/>
+          <line x1="2" y1="7" x2="14" y2="7"/>
+          <line x1="5.5" y1="1.5" x2="5.5" y2="4.5"/>
+          <line x1="10.5" y1="1.5" x2="10.5" y2="4.5"/>
+        </svg>
+        Verfügbarkeit prüfen
+      </a>
+    </nav>
   </div>
 </header>
 
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero">
-  <img class="hero-img" src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-urlaub-bauernhof-suedtirol.jpg" alt="Trinnerhof Natz-Schabs Südtirol" />
+<!-- ── HERO ── -->
+<section id="hero">
+  <img class="hero-img"
+    src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-urlaub-bauernhof-suedtirol.jpg"
+    alt="Trinnerhof Natz-Schabs – Bauernhofurlaub Südtirol" />
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Urlaub am Bauernhof · Natz-Schabs · Südtirol</span>
-    <h1 class="hero-h1">Zwischen Apfelbäumen<br><em>und Alpenpanorama</em></h1>
-    <p class="hero-sub">Hof-Chalets &amp; Ferienwohnungen auf dem denkmalgeschützten Trinnerhof – sonnige Alleinlage oberhalb von Brixen, private Wellness &amp; echte Südtiroler Gastfreundschaft.</p>
-    <div class="hero-btns">
-      <a href="#anfrage" class="btn-primary">Unverbindlich anfragen</a>
-      <a href="#unterkunfte" class="btn-outline">Unterkünfte entdecken</a>
+  <div class="hero-content container">
+    <div class="hero-badge">Bauernhofurlaub &nbsp;&middot;&nbsp; Natz-Schabs &nbsp;&middot;&nbsp; Südtirol</div>
+    <h1 class="hero-h1">Hof-Chalets &amp; Ferienwohnungen<br>zwischen Apfelbäumen und Alpenblick</h1>
+    <span class="hero-kw">Trinnerhof &ndash; denkmalgeschützter Erbhof der Familie Jaist in Natz-Schabs nahe Brixen. Exklusive Hof-Chalets mit privater Wellness, Ferienwohnungen und Zimmer mit Frühstück inmitten von Apfelplantagen und Weinbergen im Eisacktal.</span>
+    <div class="hero-cta-wrap">
+      <a href="#bookingForm" class="btn-primary">Jetzt unverbindlich anfragen</a>
+      <a href="#zimmer" class="btn-outline">Unterkünfte &amp; Preise</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-line"></span>
     <span>Entdecken</span>
   </div>
 </section>
 
-<!-- ═══════════ USP BAR ═══════════ -->
-<div class="uspbar">
-  <div class="uspbar-inner">
-    <div class="usp">
-      <div class="usp-icon">🏔️</div>
-      <div class="usp-title">Sonnige Alleinlage</div>
-      <div class="usp-text">Oberhalb von Brixen im Eisacktal</div>
-    </div>
-    <div class="usp">
-      <div class="usp-icon">🧖</div>
-      <div class="usp-title">Private Wellness</div>
-      <div class="usp-text">Finnische Sauna &amp; Ruheraum</div>
-    </div>
-    <div class="usp">
-      <div class="usp-icon">🍎</div>
-      <div class="usp-title">Hofprodukte</div>
-      <div class="usp-text">Frühstück &amp; Verkostungsraum</div>
-    </div>
-    <div class="usp">
-      <div class="usp-icon">🎫</div>
-      <div class="usp-title">Südtirol Card</div>
-      <div class="usp-text">Bus, Bahn &amp; Bergbahn inklusive</div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════ INTRO ═══════════ -->
-<section class="intro">
-  <div class="intro-inner">
-    <div>
-      <span class="label">Guat · Echt · Traditionell</span>
-      <h2 class="h2-serif">Euer Rückzugsort auf dem <em>Trinnerhof</em></h2>
-      <p class="body-text">Wir, die Familie Jaist, heißen Euch in sonniger Alleinlage auf unserem denkmalgeschützten Erbhof herzlich willkommen. Eingebettet zwischen Apfelbäumen und Weinbergen haben wir in unseren beiden Häusern wahre Wohnträume geschaffen.</p>
-      <p class="body-text">Unser Stammhaus mit renovierten Unterkünften und das umgebaute historische Haus mit zwei exklusiven Hof-Chalets – jeder Urlaubstag wartet darauf, gefüllt zu werden mit Dingen, die Euch gefallen.</p>
-      <ul class="intro-list">
-        <li>Denkmalgeschützter Erbhof in 4. Generation</li>
-        <li>Privater Wellnessbereich mit finnischer Sauna</li>
-        <li>Große Panorama-Liegewiese &amp; Spielplatz</li>
-        <li>Reichhaltiges Frühstücksbuffet mit Hofprodukten</li>
-        <li>Brixen Südtirol Card für alle Gäste inklusive</li>
-        <li>Buschenschank mit traditionellem Törggelen</li>
-      </ul>
-    </div>
-    <img class="intro-img" src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhofurlaub-natz-schabs.jpg" alt="Familie Jaist Trinnerhof" />
-  </div>
-</section>
-
-<!-- ═══════════ UNTERKÜNFTE ═══════════ -->
-<section class="units" id="unterkunfte">
-  <div class="units-inner">
-    <div class="section-head">
-      <span class="label">Eure Unterkunft</span>
-      <h2 class="section-h2">Wählt Euren <em>Lieblingsplatz</em></h2>
-      <p class="section-desc">Vom exklusiven Hof-Chalet mit Privatwellness bis zur gemütlichen Ferienwohnung – auf dem Trinnerhof findet jeder seinen perfekten Rückzugsort.</p>
-    </div>
-
-    <div class="unit-tabs">
-      <button class="unit-tab active" data-tab="chalets">Hof-Chalets</button>
-      <button class="unit-tab" data-tab="wohnungen">Ferienwohnungen &amp; Zimmer</button>
-    </div>
-
-    <!-- HOF-CHALETS -->
-    <div class="unit-panel active" id="tab-chalets">
-      <div class="units-grid">
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-olte-muehle-01.jpg" alt="Hof-Chalet Olte Mühle" />
-          <div class="unit-body">
-            <span class="unit-cat">Hof-Chalet · Exklusiv</span>
-            <h3 class="unit-h3">Olte Mühle</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–5 Personen</span>
-              <span class="unit-tag">60 m²</span>
-              <span class="unit-tag">1. Stock</span>
-              <span class="unit-tag">Private Loggia</span>
-            </div>
-            <p class="unit-text">Das Hof-Chalet „Olte Mühle" versprüht den Charme des historischen Gebäudes mit modernem Komfort. Viel natürliches Holz, handverarbeitetes Altholz und hochwertige Stoffe prägen die Atmosphäre. Große Wohnküche, getrenntes Schlafzimmer, Kinderschlafkoje – und eine private Loggia mit Bergpanorama.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 160 €</span>
-              <span class="unit-price-unit">/ Nacht · 2 Pers.</span>
-            </div>
-          </div>
-        </div>
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-kommer-02.jpg" alt="Hof-Chalet Kommer" />
-          <div class="unit-body">
-            <span class="unit-cat">Hof-Chalet · Exklusiv</span>
-            <h3 class="unit-h3">Kommer</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–5 Personen</span>
-              <span class="unit-tag">60 m²</span>
-              <span class="unit-tag">2. Stock</span>
-              <span class="unit-tag">Großer Balkon</span>
-            </div>
-            <p class="unit-text">Das Hof-Chalet „Kommer" im 2. Stock bietet einen großzügigen Balkon mit traumhaftem Ausblick auf die umliegenden Bergspitzen. Vollständig ausgestattete Wohnküche mit Spülmaschine, getrenntes Schlafzimmer, Kinderschlafkoje und exklusiver Wellnesszugang inklusive.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 160 €</span>
-              <span class="unit-price-unit">/ Nacht · 2 Pers.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-alt); padding: 22px 28px; margin-top: 32px; border-left: 3px solid var(--gold);">
-        <p style="font-size:.87rem; color: var(--forest); line-height: 1.7;">
-          <strong>In den Hof-Chalets inklusive:</strong> Privater Wellnessbereich mit finnischer Sauna &amp; Ruheraum · Bademäntel &amp; Badetasche · Endreinigung · Hand- &amp; Badetücher · Bettwäsche · Brixen Südtirol Card · WLAN<br>
-          <span style="font-size:.8rem; color: var(--muted); margin-top:6px; display:block;">Frühstücksbuffet auf Wunsch: 20 € / Person &amp; Tag. Kinder unter 8 Jahren: 13 €. Kinder unter 3 Jahren: kostenlos. · Keine Haustiere in den Hof-Chalets gestattet.</span>
-        </p>
+<!-- ── INTRO ── -->
+<section id="intro">
+  <div class="intro-inner fade-up">
+    <div class="intro-text-col">
+      <span class="section-label">Trinnerhof &ndash; Natz-Schabs, Eisacktal</span>
+      <h2 class="intro-h2">Euer Rückzugsort auf dem<br>denkmalgeschützten Trinnerhof</h2>
+      <p class="intro-text">Wir, die Familie Jaist, heißen Euch herzlich willkommen auf unserem <strong>denkmalgeschützten Erbhof</strong> in sonniger Alleinlage oberhalb von Brixen im Eisacktal. Eingebettet zwischen Apfelbäumen und Weinbergen haben wir in unseren beiden Häusern wahre Wohnträume geschaffen.</p>
+      <p class="intro-text">Das Stammhaus mit liebevoll renovierten Unterkünften und das umgebaute historische Haus mit zwei exklusiven Hof-Chalets aus handverarbeitetem Altholz &ndash; jeder Urlaubstag am Trinnerhof wird zu einem unvergesslichen Moment in der Natur Südtirols.</p>
+      <p class="intro-text">Ob Wandern, Biken, Wellness oder einfach Abschalten &ndash; bei uns findet Ihr den Ausgleich, den Ihr sucht. <em>Guat! Echt! Traditionell!</em></p>
+      <div class="intro-meta">
+        <div><span class="meta-num">7</span><span class="meta-label">Unterkünfte</span></div>
+        <div><span class="meta-num">870</span><span class="meta-label">m Seehöhe</span></div>
+        <div><span class="meta-num">4.</span><span class="meta-label">Generation</span></div>
       </div>
     </div>
-
-    <!-- FERIENWOHNUNGEN & ZIMMER -->
-    <div class="unit-panel" id="tab-wohnungen">
-      <!-- Golden Delicious - full width -->
-      <div class="unit-card" style="display:grid; grid-template-columns: 1fr 1fr; margin-bottom: 32px;">
-        <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-golden-delicious-01.jpg" alt="Ferienwohnung Golden Delicious" style="height:100%; aspect-ratio:unset;" />
-        <div class="unit-body" style="padding: 36px 32px;">
-          <span class="unit-cat">Ferienwohnung · Stammhaus</span>
-          <h3 class="unit-h3">Golden Delicious</h3>
-          <div class="unit-meta">
-            <span class="unit-tag">2–5 Personen</span>
-            <span class="unit-tag">50 m²</span>
-            <span class="unit-tag">2. Stock</span>
-            <span class="unit-tag">Balkon</span>
-          </div>
-          <p class="unit-text">Die Ferienwohnung „Golden Delicious" bietet alles für einen komfortablen Aufenthalt: komplett eingerichtete Küche, getrenntes Schlafzimmer mit Doppelbett, Wohnbereich mit Schlafcouch – und einen gemütlichen Balkon mit Ausblick über die Apfelbäume.</p>
-          <div class="unit-price">
-            <span class="unit-price-val">ab 100 €</span>
-            <span class="unit-price-unit">/ Nacht · 2 Pers. (ohne Frühstück)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Zimmer Grid -->
-      <h3 style="font-family: var(--serif); font-size:1.35rem; color: var(--forest); margin-bottom: 24px; font-weight:400;">Zimmer mit Frühstück</h3>
-      <div class="units-grid three">
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/zimmer-wiesenruhe-03.jpg" alt="Zimmer Wiesenruhe" />
-          <div class="unit-body">
-            <span class="unit-cat">Zimmer mit Frühstück</span>
-            <h3 class="unit-h3">Wiesenruhe</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–4 Personen</span>
-              <span class="unit-tag">30 m²</span>
-              <span class="unit-tag">Balkon</span>
-            </div>
-            <p class="unit-text">Doppelzimmer mit Schlafcouch, Vollholzmöbel, Balkon mit Aussicht, Bad mit Dusche &amp; Bodenheizung.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 50 €</span>
-              <span class="unit-price-unit">/ Pers. mit Frühstück</span>
-            </div>
-          </div>
-        </div>
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/zimmer-fernblick-a-02.jpg" alt="Zimmer Fernblick" />
-          <div class="unit-body">
-            <span class="unit-cat">Zimmer mit Frühstück</span>
-            <h3 class="unit-h3">Fernblick</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–4 Personen</span>
-              <span class="unit-tag">30 m²</span>
-              <span class="unit-tag">Balkon</span>
-            </div>
-            <p class="unit-text">Doppelzimmer mit Schlafcouch, Vollholzmöbel, Balkon mit Aussicht, Bad mit Dusche &amp; Bodenheizung.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 50 €</span>
-              <span class="unit-price-unit">/ Pers. mit Frühstück</span>
-            </div>
-          </div>
-        </div>
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/zimmer-bergluft-02.jpg" alt="Zimmer Bergluft" />
-          <div class="unit-body">
-            <span class="unit-cat">Zimmer mit Frühstück</span>
-            <h3 class="unit-h3">Bergluft</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–4 Personen</span>
-              <span class="unit-tag">30 m²</span>
-              <span class="unit-tag">Balkon</span>
-            </div>
-            <p class="unit-text">Doppelzimmer mit Schlafcouch, Vollholzmöbel, Balkon mit Aussicht, Bad mit Dusche &amp; Bodenheizung.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 50 €</span>
-              <span class="unit-price-unit">/ Pers. mit Frühstück</span>
-            </div>
-          </div>
-        </div>
-        <div class="unit-card">
-          <img class="unit-img" src="https://www.trinnerhof.com/wp-content/uploads/zimmer-kerner-01.jpg" alt="Zimmer Kerner" />
-          <div class="unit-body">
-            <span class="unit-cat">Zimmer mit Frühstück</span>
-            <h3 class="unit-h3">Kerner</h3>
-            <div class="unit-meta">
-              <span class="unit-tag">2–4 Personen</span>
-              <span class="unit-tag">40 m²</span>
-              <span class="unit-tag">Balkon</span>
-            </div>
-            <p class="unit-text">Großzügiges Zimmer mit offenem Wohn-Schlafbereich, ausziehbarer Schlafcouch, Doppelbett, Balkon mit Ausblick.</p>
-            <div class="unit-price">
-              <span class="unit-price-val">ab 50 €</span>
-              <span class="unit-price-unit">/ Pers. mit Frühstück</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-alt); padding: 22px 28px; margin-top: 32px; border-left: 3px solid var(--gold);">
-        <p style="font-size:.87rem; color: var(--forest); line-height: 1.7;">
-          <strong>In allen Unterkünften inklusive:</strong> Brixen Südtirol Card · WLAN · Handtücher &amp; Bettwäsche · Endreinigung (Zimmer: tägl. Reinigung) · Parkplatz · Nutzung Spielplatz &amp; Panorama-Liegewiese<br>
-          <span style="font-size:.8rem; color: var(--muted); margin-top:6px; display:block;">Frühstücksbuffet: In den Zimmern im Preis enthalten · Für Ferienwohnung auf Wunsch: 20 € / Person &amp; Tag. · Haustiere in Zimmern & Ferienwohnung: 20 € / Tag</span>
-        </p>
+    <div class="intro-image-wrap">
+      <img class="intro-image-main"
+        src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhofurlaub-natz-schabs.jpg"
+        alt="Trinnerhof – Familie Jaist, Natz-Schabs Südtirol"
+        loading="lazy" width="560" height="740" />
+      <div class="intro-image-badge">
+        <svg class="badge-icon-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 4C10 4 6 8.5 6 14c0 8 10 14 10 14s10-6 10-14c0-5.5-4-10-10-10z" stroke="#A68A56" stroke-width="1.5" fill="none"/>
+          <circle cx="16" cy="13" r="3.5" stroke="#A68A56" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div class="badge-text">Sonnige Alleinlage &middot; oberhalb von Brixen im Eisacktal</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ WELLNESS SPLIT ═══════════ -->
-<section class="split">
-  <div class="split-inner">
-    <img class="split-img" src="https://www.trinnerhof.com/wp-content/uploads/wellness-sauna-bauernhof-02.jpg" alt="Wellness Sauna Trinnerhof" />
-    <div class="split-text">
-      <span class="label">NEU · Privater Wellnessbereich</span>
-      <h2 class="h2-serif">Bauernhofurlaub<br><em>mit Wellness</em></h2>
-      <p class="body-text">Kuschelige und private Entspannungsmomente bietet Euch unser neuer Wellnessbereich mit finnischer Sauna und modernem Ruheraum. Ungestört und in absoluter Privatsphäre könnt Ihr hier nach einem erlebnisreichen Urlaubstag abschalten.</p>
-      <ul class="feat-list">
-        <li>Finnische Sauna exklusiv für Trinnerhof-Gäste</li>
-        <li>Moderner Ruheraum mit Ausblick</li>
-        <li>Bademäntel &amp; Badetasche für Chalet-Gäste</li>
-        <li>Große Panorama-Liegewiese mit Liegestühlen</li>
-        <li>Spielplatz mit Kletterturm, Trampolin &amp; Schaukel</li>
-      </ul>
+<!-- ── USPs ── -->
+<section id="usps">
+  <div class="usps-inner container fade-up">
+    <div class="usp-item">
+      <svg class="usp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 28V14L16 4l12 10v14H20v-8h-8v8H4z"/>
+      </svg>
+      <div class="usp-name">Neue Hof-Chalets</div>
+      <div class="usp-desc">Zwei exklusive Hof-Chalets im historisch sanierten Haus &ndash; Altholz, Stil und privater Wellnessbereich mit finnischer Sauna.</div>
+    </div>
+    <div class="usp-item">
+      <svg class="usp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="8" width="24" height="18" rx="1.5"/>
+        <line x1="4" y1="14" x2="28" y2="14"/>
+        <line x1="11" y1="5" x2="11" y2="11"/>
+        <line x1="21" y1="5" x2="21" y2="11"/>
+      </svg>
+      <div class="usp-name">Brixen Südtirol Card</div>
+      <div class="usp-desc">Kostenlos Bus &amp; Bahn fahren, täglich eine Bergfahrt nutzen &ndash; für alle Trinnerhof-Gäste inklusive.</div>
+    </div>
+    <div class="usp-item">
+      <svg class="usp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 10 C6 6 10 4 16 4 C22 4 26 6 26 10 C26 16 16 26 16 26 C16 26 6 16 6 10Z"/>
+        <circle cx="16" cy="10" r="3"/>
+      </svg>
+      <div class="usp-name">Sonnige Alleinlage</div>
+      <div class="usp-desc">Panoramablick ins Eisacktal &ndash; mitten in Apfelbäumen und Weinbergen auf dem Hochplateau über Brixen.</div>
+    </div>
+    <div class="usp-item">
+      <svg class="usp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 26L13 12l4 6 3-4 6 12H6z"/><circle cx="23" cy="8" r="2"/>
+      </svg>
+      <div class="usp-name">Frühstück &amp; Hofprodukte</div>
+      <div class="usp-desc">Reichhaltiges Frühstücksbuffet mit hausgemachten Produkten &ndash; Eier vom Hof, Marmeladen und Obst je nach Saison.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ LEISTUNGEN ═══════════ -->
-<section class="leistungen">
-  <div class="leistungen-inner">
-    <span class="label">Was Euch erwartet</span>
-    <h2 class="section-h2">Alles inklusive für<br><em>Euren perfekten Urlaub</em></h2>
-    <div class="leist-grid">
-      <div class="leist-card">
-        <div class="leist-icon">🍳</div>
-        <div class="leist-title">Frühstücksbuffet</div>
-        <div class="leist-text">Reichhaltiges Frühstück mit regionalen und hofeigenen Produkten – Eier vom Hof, hausgemachte Marmeladen, frisches Obst je nach Saison.</div>
+<!-- ── FEATURES (ACCORDION) ── -->
+<section id="features">
+  <div class="section-header fade-up">
+    <span class="section-label">Warum Trinnerhof</span>
+    <h2 class="section-h2">Urlaub am Bauernhof &ndash;<br>so erleben ihn unsere Gäste</h2>
+    <p class="section-text">Drei Erlebnisse, die Euren Aufenthalt am Trinnerhof in Natz-Schabs besonders machen.</p>
+  </div>
+  <div class="accordion-grid">
+    <div class="acc-tile">
+      <div class="acc-bg" style="background-image: url('https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-natz-schabs.jpg');"></div>
+      <div class="acc-overlay"></div>
+      <div class="acc-content">
+        <div class="acc-num">01</div>
+        <h3 class="acc-title">Exklusive Hof-Chalets<br>mit Privatwellness</h3>
+        <div class="acc-body">Unsere zwei Hof-Chalets &bdquo;Olte Mühle&ldquo; und &bdquo;Kommer&ldquo; verbinden den Charme des historischen Erbhofs mit modernem Komfort &ndash; handverarbeitetes Altholz, vollausgestattete Küche, Kinderschlafkoje und privater Wellnessbereich mit finnischer Sauna.</div>
+        <a href="#bookingForm" class="acc-link">Hof-Chalet anfragen</a>
       </div>
-      <div class="leist-card">
-        <div class="leist-icon">🎫</div>
-        <div class="leist-title">Brixen Südtirol Card</div>
-        <div class="leist-text">Kostenlos Bus &amp; Bahn fahren, täglich eine Bergfahrt nutzen und viele Freizeit- und Kulturangebote im Eisacktal genießen.</div>
+    </div>
+    <div class="acc-tile">
+      <div class="acc-bg" style="background-image: url('https://www.trinnerhof.com/wp-content/uploads/new-wellness-bauernhof.jpg');"></div>
+      <div class="acc-overlay"></div>
+      <div class="acc-content">
+        <div class="acc-num">02</div>
+        <h3 class="acc-title">Private Wellness &ndash;<br>Sauna &amp; Ruheraum</h3>
+        <div class="acc-body">Kuschelig und ganz für Euch &ndash; unser neuer Wellnessbereich mit finnischer Sauna und modernem Ruheraum. Ungestört und in absoluter Privatsphäre genießt Ihr die Stille nach einem erlebnisreichen Südtirol-Tag. Bademäntel und Badetasche für Chalet-Gäste inklusive.</div>
+        <a href="#bookingForm" class="acc-link">Jetzt anfragen</a>
       </div>
-      <div class="leist-card">
-        <div class="leist-icon">🏔️</div>
-        <div class="leist-title">Wandern &amp; Biken</div>
-        <div class="leist-text">Outdoor-Action direkt ab Hof: Wanderwege, Bikestrecken und mehrere Skigebiete in der Nähe. Leihausrüstung auf Anfrage.</div>
-      </div>
-      <div class="leist-card">
-        <div class="leist-icon">🍷</div>
-        <div class="leist-title">Buschenschank</div>
-        <div class="leist-text">Traditionelles Törggelen mit hausgemachtem Wein, Apfelsaft und Südtiroler Kost im eigenen Buschenschank in Raas.</div>
+    </div>
+    <div class="acc-tile">
+      <div class="acc-bg" style="background-image: url('https://www.trinnerhof.com/wp-content/uploads/buschenschank-trinnerhof-eisacktal.jpg');"></div>
+      <div class="acc-overlay"></div>
+      <div class="acc-content">
+        <div class="acc-num">03</div>
+        <h3 class="acc-title">Buschenschank &ndash;<br>Törggelen im Eisacktal</h3>
+        <div class="acc-body">Unser Buschenschank in Raas ist ein kulinarisches Erlebnis: Traditionelles Törggelen mit hausgemachtem Wein, selbst gepresstem Apfelsaft und klassischer Südtiroler Kost. Freitags ab 16 Uhr, Samstag &amp; Sonntag ab 12 Uhr geöffnet.</div>
+        <a href="#bookingForm" class="acc-link">Unterkunft anfragen</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ REVIEWS ═══════════ -->
-<section class="reviews">
-  <div class="reviews-inner">
-    <div class="section-head">
-      <span class="label">Was unsere Gäste sagen</span>
-      <h2 class="section-h2">Euer Ausblick inmitten<br><em>von Apfelbäumen</em></h2>
-    </div>
-    <div class="reviews-grid">
-      <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">„Schon bei der herzlichen Ankunft fühlten wir uns in der modernen, sauberen Ferienwohnung ‚Olte Mühle' rundum wohl – wie Urlaub bei Freunden, den wir von Herzen weiterempfehlen."</p>
-        <div class="rev-author">Micha</div>
-        <div class="rev-source">5/5 · Google</div>
+<!-- ── PHILOSOPHY ── -->
+<section id="philosophy">
+  <div class="philosophy-bg" role="img" aria-label="Trinnerhof Bauernhof Natz-Schabs Eisacktal Südtirol"></div>
+  <div class="philosophy-inner fade-up">
+    <span class="quote-mark">&ldquo;</span>
+    <p class="philosophy-quote">Zwischen Apfelbäumen und Alpenpanorama beginnt alles ein bisschen ruhiger zu werden. Hier auf dem Trinnerhof findet man, was im Alltag so oft verloren geht &ndash; echte Gastfreundschaft, Natur und Stille.</p>
+    <span class="philosophy-attr">Familie Jaist &nbsp;&middot;&nbsp; Trinnerhof &nbsp;&middot;&nbsp; Natz-Schabs, Südtirol</span>
+  </div>
+</section>
+
+<!-- ── RATINGS ── -->
+<section id="bewertungen">
+  <div class="ratings-inner fade-up">
+    <p class="ratings-label">Ausgezeichnet bewertet &ndash; von echten Gästen des Trinnerhofs in Natz-Schabs</p>
+    <div class="ratings-grid">
+      <div class="rating-card">
+        <div class="rating-platform">Google Reviews</div>
+        <div class="rating-score">5.0</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-divider"></div>
+        <div class="rating-text">&bdquo;Aussergewöhnlich&ldquo;</div>
+        <div class="rating-count">Verifizierte Gästebewertungen</div>
       </div>
-      <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">„Wir waren beeindruckt von der gelungenen Umgestaltung: denkmalgeschützt umgebaut, entstanden wunderschöne Chalets mit hochwertiger Ausstattung und eigener Sauna – stilvoll umgesetzt."</p>
-        <div class="rev-author">Jürgen</div>
-        <div class="rev-source">5/5 · Roter Hahn</div>
+      <div class="rating-card">
+        <div class="rating-platform">Booking.com</div>
+        <div class="rating-score">9.7</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-divider"></div>
+        <div class="rating-text">&bdquo;Außergewöhnlich&ldquo;</div>
+        <div class="rating-count">Verifizierte Gästebewertungen</div>
       </div>
-      <div class="rev-card">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">„Ein gelungener Familienurlaub in einer sehr komfortablen und außergewöhnlich gelegenen Unterkunft. Besonders für Familien: der Kinderspielplatz und der Buschenschank."</p>
-        <div class="rev-author">Laura</div>
-        <div class="rev-source">9/10 · Booking.com</div>
+      <div class="rating-card">
+        <div class="rating-platform">Roter Hahn</div>
+        <div class="rating-score">5.0</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-divider"></div>
+        <div class="rating-text">&bdquo;Sehr empfehlenswert&ldquo;</div>
+        <div class="rating-count">Verifizierte Urlaubsbewertungen</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ PREISE & KONDITIONEN ═══════════ -->
-<section class="preise">
-  <div class="preise-inner">
-    <span class="label">Transparente Konditionen</span>
-    <h2 class="section-h2">Preise &amp; <em>Buchungsinfos</em></h2>
-    <div class="preise-layout">
-      <!-- Konditionen -->
+<!-- ── ROOM SLIDER ── -->
+<section id="zimmer">
+  <div class="section-header fade-up">
+    <span class="section-label">Unterkünfte &amp; Preise</span>
+    <h2 class="section-h2">Euer Zuhause auf dem<br>Trinnerhof &ndash; sieben Kategorien</h2>
+    <p class="section-text">Vom exklusiven Hof-Chalet mit Privatwellness bis zur gemütlichen Ferienwohnung und dem Zimmer mit Frühstück &ndash; auf dem Trinnerhof findet jeder seinen Lieblingsplatz.</p>
+  </div>
+  <div class="slider-wrap" id="roomSlider">
+    <div class="slider-track" id="sliderTrack">
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-olte-muehle-01.jpg" alt="Hof-Chalet Olte Mühle – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 01 &middot; Hof-Chalet &middot; Exklusiv</span>
+          <h3 class="slide-name">Hof-Chalet &bdquo;Olte Mühle&ldquo;</h3>
+          <p class="slide-desc">Stilvoll wohnen im historisch sanierten Chalet &ndash; viel natürliches Holz, handverarbeitetes Altholz und hochwertige Ausstattung. Private Loggia mit traumhaftem Bergpanorama, vollausgestattete Wohnküche und abgetrennte Kinderschlafkoje.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">60 m&sup2;</span><span class="meta-lbl">Wohnfläche</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;5</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 160 &euro;</span><span class="meta-lbl">2 Pers./Nacht</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-kommer-02.jpg" alt="Hof-Chalet Kommer – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 02 &middot; Hof-Chalet &middot; Exklusiv</span>
+          <h3 class="slide-name">Hof-Chalet &bdquo;Kommer&ldquo;</h3>
+          <p class="slide-desc">Im 2. Stock des historischen Hauses &ndash; das Hof-Chalet &bdquo;Kommer&ldquo; besticht durch seinen großzügigen Balkon mit spektakulärem Blick auf die Südtiroler Berggipfel. Gleiche hochwertige Ausstattung wie die Olte Mühle, inklusive Privatwellness.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">60 m&sup2;</span><span class="meta-lbl">Wohnfläche</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;5</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 160 &euro;</span><span class="meta-lbl">2 Pers./Nacht</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-golden-delicious-01.jpg" alt="Ferienwohnung Golden Delicious – Trinnerhof" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 03 &middot; Ferienwohnung</span>
+          <h3 class="slide-name">Ferienwohnung &bdquo;Golden Delicious&ldquo;</h3>
+          <p class="slide-desc">Gemütlich und geräumig im Stammhaus &ndash; die Ferienwohnung &bdquo;Golden Delicious&ldquo; bietet eine vollausgestattete Küche, separates Schlafzimmer mit Doppelbett und einen sonnigen Balkon mit Blick über die Apfelbäume ins Eisacktal.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">50 m&sup2;</span><span class="meta-lbl">Wohnfläche</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;5</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 100 &euro;</span><span class="meta-lbl">2 Pers./Nacht</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/zimmer-wiesenruhe-03.jpg" alt="Zimmer Wiesenruhe – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 04 &middot; Zimmer mit Frühstück</span>
+          <h3 class="slide-name">Zimmer &bdquo;Wiesenruhe&ldquo;</h3>
+          <p class="slide-desc">Eingerichtet in handgefertigten Vollholzmöbeln &ndash; das Zimmer Wiesenruhe bietet ein Doppelbett, eine bequeme Schlafcouch, Balkon mit Aussicht und ein Bad mit Dusche und Bodenheizung. Das Frühstücksbuffet ist im Preis inbegriffen.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">30 m&sup2;</span><span class="meta-lbl">Zimmergröße</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;4</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 50 &euro;</span><span class="meta-lbl">Pers./Nacht inkl. Frühstück</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/zimmer-fernblick-a-02.jpg" alt="Zimmer Fernblick – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 05 &middot; Zimmer mit Frühstück</span>
+          <h3 class="slide-name">Zimmer &bdquo;Fernblick&ldquo;</h3>
+          <p class="slide-desc">Mit dem Fernblick-Zimmer genießt Ihr vom Balkon aus einen weiten Blick über das Apfelhochplateau in die Südtiroler Bergwelt. Vollholzmöbel, Doppelbett, Schlafcouch und ein modernes Bad mit Bodenheizung.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">30 m&sup2;</span><span class="meta-lbl">Zimmergröße</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;4</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 50 &euro;</span><span class="meta-lbl">Pers./Nacht inkl. Frühstück</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/zimmer-bergluft-02.jpg" alt="Zimmer Bergluft – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 06 &middot; Zimmer mit Frühstück</span>
+          <h3 class="slide-name">Zimmer &bdquo;Bergluft&ldquo;</h3>
+          <p class="slide-desc">Frische Bergluft und gemütlicher Comfort &ndash; das Zimmer Bergluft überzeugt mit Vollholzmöbeln, Balkon mit Aussicht und einem Bad mit Dusche und Bodenheizung. Ein entspannter Ausgangspunkt für Wanderungen und Radtouren im Eisacktal.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">30 m&sup2;</span><span class="meta-lbl">Zimmergröße</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;4</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 50 &euro;</span><span class="meta-lbl">Pers./Nacht inkl. Frühstück</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+      <article class="slide">
+        <div class="slide-img"><img src="https://www.trinnerhof.com/wp-content/uploads/zimmer-kerner-01.jpg" alt="Zimmer Kerner – Trinnerhof Natz-Schabs" loading="lazy" /></div>
+        <div class="slide-body">
+          <span class="slide-tag">Unterkunft 07 &middot; Zimmer mit Frühstück</span>
+          <h3 class="slide-name">Zimmer &bdquo;Kerner&ldquo;</h3>
+          <p class="slide-desc">Das größte Zimmer mit Frühstück &ndash; das Kerner-Zimmer bietet einen offenen Wohn-Schlafbereich mit Doppelbett, ausziehbarer Schlafcouch und gemütlichem Balkon. Ideal für Familien oder Paare, die etwas mehr Platz wünschen.</p>
+          <div class="slide-meta">
+            <div class="slide-meta-item"><span class="meta-val">40 m&sup2;</span><span class="meta-lbl">Zimmergröße</span></div>
+            <div class="slide-meta-item"><span class="meta-val">2&ndash;4</span><span class="meta-lbl">Personen</span></div>
+            <div class="slide-meta-item"><span class="meta-val">ab 50 &euro;</span><span class="meta-lbl">Pers./Nacht inkl. Frühstück</span></div>
+          </div>
+          <a href="#bookingForm" class="slide-cta">Verfügbarkeit prüfen</a>
+        </div>
+      </article>
+
+    </div>
+    <div class="slider-nav">
+      <div class="slider-dots" id="sliderDots">
+        <button class="slider-dot active" data-index="0" aria-label="Hof-Chalet Olte Mühle"></button>
+        <button class="slider-dot" data-index="1" aria-label="Hof-Chalet Kommer"></button>
+        <button class="slider-dot" data-index="2" aria-label="Golden Delicious"></button>
+        <button class="slider-dot" data-index="3" aria-label="Zimmer Wiesenruhe"></button>
+        <button class="slider-dot" data-index="4" aria-label="Zimmer Fernblick"></button>
+        <button class="slider-dot" data-index="5" aria-label="Zimmer Bergluft"></button>
+        <button class="slider-dot" data-index="6" aria-label="Zimmer Kerner"></button>
+      </div>
+      <div class="slider-counter"><span id="slideCurrentNum">1</span> / <span>7</span></div>
+      <div class="slider-arrows">
+        <button class="slider-btn" id="slidePrev" aria-label="Vorherige Unterkunft">
+          <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><polyline points="11,4 6,9 11,14"/></svg>
+        </button>
+        <button class="slider-btn" id="slideNext" aria-label="Nächste Unterkunft">
+          <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><polyline points="7,4 12,9 7,14"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCES ── -->
+<section id="erlebnisse">
+  <div class="section-header fade-up">
+    <span class="section-label">Aktivitäten &amp; Erlebnisse</span>
+    <h2 class="section-h2">Natz-Schabs &amp; das Eisacktal erleben &ndash;<br>Sommer wie Winter</h2>
+    <p class="section-text">Vom Trinnerhof direkt in die Natur Südtirols &ndash; die schönsten Erlebnisse beginnen direkt vor unserer Tür.</p>
+  </div>
+  <div class="exp-grid container fade-up">
+    <div class="exp-item">
+      <svg class="exp-icon-wrap" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 30l7-14 4 7 4-5.5L27 30H6z"/><circle cx="27" cy="10" r="2.5"/>
+      </svg>
+      <div class="exp-name">Wandern ab Hof</div>
+      <p class="exp-desc">Zahlreiche Wanderwege starten direkt am Trinnerhof &ndash; vom gemütlichen Spaziergang durch Apfelbaumgärten bis zur anspruchsvollen Tour in die umliegenden Berge des Eisacktals.</p>
+    </div>
+    <div class="exp-item">
+      <svg class="exp-icon-wrap" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="12" cy="28" r="3"/><circle cx="26" cy="28" r="3"/><path d="M12 25V16l6-6 6 4v11"/><path d="M12 20h8"/>
+      </svg>
+      <div class="exp-name">Biken im Eisacktal</div>
+      <p class="exp-desc">Das Eisacktal ist ein Paradies für Mountainbiker und Radfahrer. Trails für alle Schwierigkeitsgrade &ndash; von gemütlichen Ausfahrten bis zu anspruchsvollen Singletrails in die Bergwelt.</p>
+    </div>
+    <div class="exp-item">
+      <svg class="exp-icon-wrap" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 28V16L18 7l10 9v12H24v-7h-6v7H8z"/>
+      </svg>
+      <div class="exp-name">Skigebiete in der Nähe</div>
+      <p class="exp-desc">Mehrere Skigebiete sind vom Trinnerhof bequem erreichbar &ndash; perfekt für Wintersport-Fans. Ski-Depot am Hof vorhanden, Schneeschuhe und Rodeln kostenlos leihbar.</p>
+    </div>
+    <div class="exp-item">
+      <svg class="exp-icon-wrap" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 24c0-5.5 4.5-10 10-10s10 4.5 10 10"/><path d="M13 30c0-2.8 2.2-5 5-5s5 2.2 5 5"/>
+        <line x1="18" y1="4" x2="18" y2="10"/><line x1="10" y1="6" x2="13" y2="11"/><line x1="26" y1="6" x2="23" y2="11"/>
+      </svg>
+      <div class="exp-name">Brixen &amp; Umgebung</div>
+      <p class="exp-desc">Die charmante Bischofsstadt Brixen ist nur wenige Minuten entfernt &ndash; historische Altstadt, Märkte, Kultur und Kulinarik. Mit der Brixen Südtirol Card Bus &amp; Bahn gratis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ── -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Gästestimmen</span>
+      <h2 class="section-h2">Was Gäste über ihren<br>Aufenthalt am Trinnerhof sagen</h2>
+      <p class="section-text">Ehrliche Eindrücke von Gästen, die auf unserem Bauernhof in Natz-Schabs Urlaub gemacht haben.</p>
+    </div>
+    <div class="reviews-grid fade-up">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&bdquo;Schon bei der herzlichen Ankunft fühlten wir uns in der modernen, sauberen Ferienwohnung &lsquo;Olte Mühle&rsquo; rundum wohl &ndash; wie Urlaub bei Freunden, den wir von Herzen weiterempfehlen.&ldquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div><div class="review-name">Micha</div><div class="review-meta">Google &middot; 5/5 Sterne</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&bdquo;Wir waren beeindruckt von der gelungenen Umgestaltung des Trinnerhofs: denkmalgeschützt umgebaut, entstanden wunderschöne Chalets mit hochwertiger Ausstattung und eigener Sauna &ndash; stilvoll umgesetzt und dennoch familiär.&ldquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div><div class="review-name">Jürgen</div><div class="review-meta">Roter Hahn &middot; 5/5 Sterne</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&bdquo;Ein gelungener Familienurlaub in einer sehr komfortablen und außergewöhnlich gelegenen Unterkunft. Besonders zu empfehlen: der Kinderspielplatz und die Möglichkeit, abends im Buschenschank zu essen.&ldquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div><div class="review-name">Laura</div><div class="review-meta">Booking.com &middot; 9/10 Punkte</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section id="impressionen">
+  <div class="section-header fade-up">
+    <span class="section-label">Impressionen</span>
+    <h2 class="section-h2">Trinnerhof &amp; Natz-Schabs &ndash;<br>in Bildern</h2>
+  </div>
+  <div class="gallery-grid container fade-up">
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhof-suedtirol-ausblick.jpg" alt="Trinnerhof Ausblick – Natz-Schabs Südtirol Eisacktal" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-olte-muehle-02.jpg" alt="Hof-Chalet Olte Mühle – Trinnerhof Südtirol" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/wellness-sauna-bauernhof-02.jpg" alt="Private Wellness Sauna – Trinnerhof Natz-Schabs" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/urlaub-am-bauernhof-fruehstueck.jpg" alt="Frühstücksbuffet am Trinnerhof – Bauernhofurlaub Südtirol" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhof-suedtirol-liegewiese.jpg" alt="Panorama-Liegewiese – Trinnerhof Natz-Schabs" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/ferienwohnung-kommer-01.jpg" alt="Hof-Chalet Kommer – Trinnerhof Südtirol" loading="lazy" />
+    </div>
+    <div class="gal-item">
+      <img src="https://www.trinnerhof.com/wp-content/uploads/trinnerhof-bauernhof-suedtirol-07.jpg" alt="Trinnerhof Bauernhof – Natz-Schabs Südtirol" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA + FORM ── -->
+<section id="anfrage">
+  <div class="cta-inner fade-up">
+    <span class="section-label" style="display:block;text-align:center;">Unverbindlich anfragen</span>
+    <h2 class="cta-h2">Jetzt Unterkunft am Trinnerhof<br>anfragen &amp; Urlaub sichern</h2>
+    <p class="cta-text">Reserviert Eure Unterkunft auf dem <strong>Trinnerhof in Natz-Schabs</strong>, Südtirol &ndash; direkt und unverbindlich. Wir antworten innerhalb von 24 Stunden und beraten Euch gerne persönlich zu den besten Unterkünften und Terminen für Euren Bauernhofurlaub im Eisacktal.</p>
+    <div class="cta-contact-bar">
+      <div class="contact-method">
+        <svg class="contact-icon-svg" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4h4l2 5-2.5 1.5A11 11 0 0 0 13.5 16.5L15 14l5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 2 6a2 2 0 0 1 2-2"/></svg>
+        <span class="contact-label">Telefon</span>
+        <a href="tel:+390472412238" class="contact-value">+39 0472 412238</a>
+        <p class="contact-note">Mo &ndash; Sa &middot; 9:00 &ndash; 19:00 Uhr</p>
+      </div>
+      <div class="cta-divider"></div>
+      <div class="contact-method">
+        <svg class="contact-icon-svg" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="2"/><polyline points="2,4 11,13 20,4"/></svg>
+        <span class="contact-label">E-Mail</span>
+        <a href="mailto:info@trinnerhof.com" class="contact-value">info@trinnerhof.com</a>
+        <p class="contact-note">Antwort innerhalb von 24 Stunden</p>
+      </div>
+    </div>
+
+    <div class="form-wrap">
+      <div class="form-title">Unverbindliche Unterkunftsanfrage</div>
+      <div class="form-subtitle">Trinnerhof &middot; Familie Jaist &middot; Michael-Pacher-Str. 74 &middot; I-39040 Natz-Schabs &middot; <a href="tel:+390472412238" style="color:inherit;">Tel. +39 0472 412238</a></div>
+      <form id="bookingForm" class="custom-form" novalidate>
+        <input type="hidden" id="hLanguage" name="language" value="DE" />
+        <div class="m-side">
+          <label class="req" for="ankunft">Ankunft</label>
+          <input type="text" id="ankunft" placeholder="tt.mm.jjjj" required />
+          <div class="field-error" id="errAnkunft">Bitte Ankunftsdatum wählen.</div>
+        </div>
+        <div class="m-side">
+          <label class="req" for="abreise">Abreise</label>
+          <input type="text" id="abreise" placeholder="tt.mm.jjjj" required />
+          <div class="field-error" id="errAbreise">Bitte Abreisedatum wählen.</div>
+        </div>
+        <div class="full-width">
+          <label for="zimmerTyp">Wunsch-Unterkunft (optional)</label>
+          <select id="zimmerTyp">
+            <option value="">-- Bitte wählen --</option>
+            <option value="Hof-Chalet Olte Mühle">Hof-Chalet &bdquo;Olte Mühle&ldquo; (60 m&sup2;, 2&ndash;5 Pers.)</option>
+            <option value="Hof-Chalet Kommer">Hof-Chalet &bdquo;Kommer&ldquo; (60 m&sup2;, 2&ndash;5 Pers.)</option>
+            <option value="Ferienwohnung Golden Delicious">Ferienwohnung &bdquo;Golden Delicious&ldquo; (50 m&sup2;, 2&ndash;5 Pers.)</option>
+            <option value="Zimmer Wiesenruhe">Zimmer &bdquo;Wiesenruhe&ldquo; (30 m&sup2;, 2&ndash;4 Pers., inkl. Frühstück)</option>
+            <option value="Zimmer Fernblick">Zimmer &bdquo;Fernblick&ldquo; (30 m&sup2;, 2&ndash;4 Pers., inkl. Frühstück)</option>
+            <option value="Zimmer Bergluft">Zimmer &bdquo;Bergluft&ldquo; (30 m&sup2;, 2&ndash;4 Pers., inkl. Frühstück)</option>
+            <option value="Zimmer Kerner">Zimmer &bdquo;Kerner&ldquo; (40 m&sup2;, 2&ndash;4 Pers., inkl. Frühstück)</option>
+          </select>
+        </div>
+        <div class="m-side">
+          <label for="erwachsene">Erwachsene</label>
+          <select id="erwachsene"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option></select>
+        </div>
+        <div class="m-side">
+          <label for="kCount">Kinder</label>
+          <select id="kCount"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+        </div>
+        <div id="k1" class="child-age-field m-side"><label class="req">Alter Kind 1</label><input type="number" name="alter_k1" min="0" max="17" /></div>
+        <div id="k2" class="child-age-field m-side"><label class="req">Alter Kind 2</label><input type="number" name="alter_k2" min="0" max="17" /></div>
+        <div id="k3" class="child-age-field m-side"><label class="req">Alter Kind 3</label><input type="number" name="alter_k3" min="0" max="17" /></div>
+        <div id="k4" class="child-age-field m-side"><label class="req">Alter Kind 4</label><input type="number" name="alter_k4" min="0" max="17" /></div>
+        <div id="k5" class="child-age-field m-side"><label class="req">Alter Kind 5</label><input type="number" name="alter_k5" min="0" max="17" /></div>
+        <div class="m-side">
+          <label class="req" for="vorname">Vorname</label>
+          <input type="text" id="vorname" required />
+          <div class="field-error" id="errVorname">Bitte Vorname eingeben.</div>
+        </div>
+        <div class="m-side">
+          <label class="req" for="nachname">Nachname</label>
+          <input type="text" id="nachname" required />
+          <div class="field-error" id="errNachname">Bitte Nachname eingeben.</div>
+        </div>
+        <div class="full-width">
+          <label class="req" for="email">E-Mail</label>
+          <input type="email" id="email" required />
+          <div class="field-error" id="errEmail">Bitte gültige E-Mail-Adresse eingeben.</div>
+        </div>
+        <div class="full-width">
+          <label class="req">Telefon</label>
+          <div class="phone-row">
+            <select id="phonePrefix">
+              <option value="0049">DE +49</option><option value="0043">AT +43</option><option value="0039">IT +39</option><option value="0041">CH +41</option><option value="0031">NL +31</option><option value="0032">BE +32</option><option value="0033">FR +33</option><option value="0044">GB +44</option><option value="0048">PL +48</option><option value="0045">DK +45</option><option value="0046">SE +46</option><option value="0047">NO +47</option><option value="00420">CZ +420</option><option value="001">US +1</option>
+            </select>
+            <input type="tel" id="phoneNumber" placeholder="151 234 56789" inputmode="numeric" pattern="[0-9 ]*" />
+          </div>
+          <div class="field-error" id="errTelefon">Bitte Telefonnummer eingeben.</div>
+        </div>
+        <div class="full-width">
+          <label for="nachricht">Nachricht (optional)</label>
+          <textarea id="nachricht" rows="3" placeholder="Besondere Wünsche, gewünschte Unterkunft, Anreise-Infos ..."></textarea>
+        </div>
+        <div class="privacy-row">
+          <input type="checkbox" id="privacy" required />
+          <label for="privacy">Ich habe die <a href="https://www.trinnerhof.com/datenschutz/" target="_blank" rel="noopener">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *</label>
+        </div>
+        <div class="field-error full-width" id="errPrivacy" style="margin-top:-8px;">Bitte Datenschutzbestimmungen akzeptieren.</div>
+        <div class="success-msg" id="successMsg">Vielen Dank! Eure Anfrage wurde erfolgreich gesendet. Wir melden uns so schnell wie möglich bei Euch.</div>
+        <button type="submit" class="submit-btn" id="sBtn">Unverbindliche Anfrage senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
       <div>
-        <div class="preise-block-title">Buchungskonditionen</div>
-        <ul class="kond-list">
-          <li>Check-In ab 15:00 Uhr / Check-Out bis 10:00 Uhr</li>
-          <li>Mindestaufenthalt 7 Nächte (Hauptsaison) · 4 Nächte (Nebensaison)</li>
-          <li>Kurzaufenthalt unter 4 Nächten: Aufschlag 50 €</li>
-          <li>Angeld: 30 % des Buchungspreises bei Buchungsbestätigung</li>
-          <li>Bezahlung: Kreditkarte (EC/VISA) oder bar</li>
-          <li>Ortstaxe: 1,80 € / Nacht / Person (ab 14 Jahren)</li>
-          <li>Wasch- &amp; Trockenmöglichkeit: jeweils 5 € / Nutzung</li>
-          <li>Hunde in Zimmern &amp; Ferienwohnung willkommen: 20 € / Tag</li>
-        </ul>
-
-        <div style="margin-top: 36px;">
-          <div class="preise-block-title">Kinder &amp; Zusatzpersonen</div>
-          <div class="kinder-grid">
-            <div class="kinder-item">
-              <div class="kinder-age">0 – 2,99 Jahre</div>
-              <div class="kinder-price">10 €</div>
-              <div class="kinder-unit">pro Tag</div>
-            </div>
-            <div class="kinder-item">
-              <div class="kinder-age">3 – 13,99 Jahre</div>
-              <div class="kinder-price">20 €</div>
-              <div class="kinder-unit">pro Tag</div>
-            </div>
-            <div class="kinder-item" style="grid-column: span 2;">
-              <div class="kinder-age">Zusatzperson (ab 14 Jahre)</div>
-              <div class="kinder-price">25 €</div>
-              <div class="kinder-unit">pro Tag · Babybett &amp; Hochstuhl auf Anfrage</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Storno -->
-      <div>
-        <div class="preise-block-title">Stornobedingungen</div>
-        <div class="storno-list">
-          <div class="storno-item">
-            <div class="storno-pct">0 %</div>
-            <div class="storno-desc">
-              <strong>Bis 3 Monate vor Anreise</strong>
-              Kostenlose Stornierung – keine Gebühren.
-            </div>
-          </div>
-          <div class="storno-item">
-            <div class="storno-pct">40 %</div>
-            <div class="storno-desc">
-              <strong>3 Monate bis 4 Wochen vor Anreise</strong>
-              40 % des Buchungspreises werden berechnet.
-            </div>
-          </div>
-          <div class="storno-item">
-            <div class="storno-pct">70 %</div>
-            <div class="storno-desc">
-              <strong>4 Wochen bis 1 Woche vor Anreise</strong>
-              70 % des Buchungspreises werden berechnet.
-            </div>
-          </div>
-          <div class="storno-item">
-            <div class="storno-pct">100 %</div>
-            <div class="storno-desc">
-              <strong>Letzte Woche · Nichtanreise · Vorzeitige Abreise</strong>
-              100 % des Buchungspreises werden berechnet.
-            </div>
-          </div>
-        </div>
-        <p style="font-size:.79rem; color: var(--muted); margin-top:16px; line-height: 1.6;">
-          Wir empfehlen den Abschluss eines <strong>Roter Hahn-Stornoschutz</strong> zur Absicherung Eurer Reise.
+        <div class="footer-logo-name">Trinnerhof</div>
+        <div class="footer-logo-sub">Natz-Schabs &middot; Eisacktal &middot; Südtirol</div>
+        <p class="footer-tagline">
+          Michael-Pacher-Str. 74 &middot; I-39040 Natz-Schabs<br>
+          Eisacktal, Südtirol, Italien<br>
+          <a href="tel:+390472412238">+39 0472 412238</a><br>
+          <a href="mailto:info@trinnerhof.com">info@trinnerhof.com</a>
         </p>
+        <p class="seo-keywords">Trinnerhof &middot; Bauernhof Südtirol &middot; Ferienwohnung Natz-Schabs &middot; Hof-Chalet Südtirol &middot; Unterkunft Brixen &middot; Urlaub Eisacktal &middot; Bauernhofurlaub Südtirol &middot; Chalet Urlaub Südtirol &middot; Natz-Schabs Unterkunft</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/trinnerhof/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=100055354996556" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">FB</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ BOOKING FORM ═══════════ -->
-<section class="booking" id="anfrage">
-  <div class="booking-inner">
-    <div class="booking-layout">
       <div>
-        <span class="label" style="color: var(--gold-lt);">Unverbindliche Anfrage</span>
-        <h2 class="booking-h2">Euren Urlaub am<br><em>Trinnerhof planen</em></h2>
-        <p class="booking-sub">Schickt uns Eure Anfrage – wir melden uns persönlich bei Euch und beraten Euch zu den besten Unterkünften und Terminen.</p>
-        <ul class="booking-info">
-          <li>Kostenlose &amp; unverbindliche Anfrage</li>
-          <li>Persönliche Betreuung durch Familie Jaist</li>
-          <li>Antwort innerhalb von 24 Stunden</li>
-          <li>Flexible Zahlungsmöglichkeiten</li>
-          <li>Kostenlose Stornierung bis 3 Monate vor Anreise</li>
-        </ul>
-
-        <div style="margin-top: 40px; padding: 24px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);">
-          <p style="font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color: var(--gold-lt); margin-bottom: 12px;">Direkt kontaktieren</p>
-          <a href="tel:+390472412238" style="font-size:1.15rem; color: var(--white); font-family: var(--serif); display:block; margin-bottom: 6px;">+39 0472 412238</a>
-          <a href="mailto:info@trinnerhof.com" style="font-size:.87rem; color: rgba(255,255,255,.55);">info@trinnerhof.com</a>
-          <p style="font-size:.78rem; color: rgba(255,255,255,.38); margin-top: 8px;">Michael-Pacher-Str. 74 · I-39040 Natz-Schabs · Südtirol</p>
+        <div class="footer-col-title">Unterkünfte &amp; Anfrage</div>
+        <div class="footer-links">
+          <a href="#zimmer">Hof-Chalet &bdquo;Olte Mühle&ldquo;</a>
+          <a href="#zimmer">Hof-Chalet &bdquo;Kommer&ldquo;</a>
+          <a href="#zimmer">Ferienwohnung &bdquo;Golden Delicious&ldquo;</a>
+          <a href="#zimmer">Zimmer mit Frühstück</a>
+          <a href="#bookingForm">Jetzt anfragen</a>
         </div>
       </div>
-
-      <!-- FORM -->
-      <div class="form-wrap">
-        <div class="form-container">
-
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-          <style>
-            .form-container { background-color:#ffffff;padding:20px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.08);max-width:600px;margin:auto;font-family:sans-serif; }
-            .custom-form { display:grid;grid-template-columns:1fr 1fr;gap:12px; }
-            .full-width { grid-column:span 2; }
-            .custom-form label { display:block;margin-bottom:4px;font-weight:600;color:#444;font-size:0.85rem; }
-            .req::after { content:" *";color:#c0392b; }
-            .custom-form input,.custom-form select,.custom-form textarea { width:100%;padding:10px;border:1px solid #dce1e5;border-radius:5px;font-size:0.95rem;box-sizing:border-box;background:#fff; }
-            .custom-form input:focus,.custom-form select:focus,.custom-form textarea:focus { border-color:#a68a56;outline:none;box-shadow:0 0 0 2px rgba(166,138,86,0.1); }
-            .custom-form input.error,.custom-form select.error { border-color:#c0392b !important; }
-            .phone-row { display:flex;gap:6px; }
-            .phone-row select { flex:0 0 auto;width:115px;font-size:0.9rem;padding:10px 6px; }
-            .phone-row input { flex:1; }
-            .child-age-field { display:none; }
-            .privacy-row { grid-column:span 2;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#f8f7f5;border-radius:7px;border:1px solid #e8e6e1; }
-            .privacy-row input[type="checkbox"] { width:18px;min-width:18px;height:18px;margin-top:2px;cursor:pointer;accent-color:#a68a56; }
-            .privacy-row label { font-size:0.82rem;color:#555;font-weight:400;margin:0;cursor:pointer;line-height:1.5; }
-            .privacy-row label a { color:#a68a56;text-decoration:underline; }
-            .field-error { font-size:0.78rem;color:#c0392b;margin-top:3px;display:none; }
-            .submit-btn { grid-column:span 2;background-color:#a68a56;color:white;padding:14px;border:none;border-radius:5px;cursor:pointer;font-size:1rem;font-weight:700;margin-top:6px;transition:background 0.2s; }
-            .submit-btn:hover { background-color:#8e7545; }
-            .submit-btn:disabled { background-color:#ccc;cursor:not-allowed; }
-            .success-msg { display:none;grid-column:span 2;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:7px;padding:14px 16px;color:#2e7d32;font-size:0.95rem;font-weight:500;text-align:center;line-height:1.5; }
-            @media (max-width:600px) { .form-container{padding:15px;} .m-side{grid-column:span 2 !important;} }
-          </style>
-
-          <form id="bookingForm" class="custom-form" novalidate="">
-            <input type="hidden" id="hLanguage" name="language" value="DE">
-
-            <div class="m-side">
-              <label class="req" for="ankunft">Ankunft</label>
-              <input type="text" id="ankunft" name="ankunft" placeholder="tt.mm.jjjj" required="">
-              <div class="field-error" id="errAnkunft">Bitte Ankunftsdatum wählen.</div>
-            </div>
-            <div class="m-side">
-              <label class="req" for="abreise">Abreise</label>
-              <input type="text" id="abreise" name="abreise" placeholder="tt.mm.jjjj" required="">
-              <div class="field-error" id="errAbreise">Bitte Abreisedatum wählen.</div>
-            </div>
-
-            <div class="m-side">
-              <label for="erwachsene">Erwachsene</label>
-              <select name="erwachsene" id="erwachsene">
-                <option value="1">1</option><option value="2" selected="">2</option>
-                <option value="3">3</option><option value="4">4</option>
-                <option value="5">5</option><option value="6">6</option><option value="7">7</option>
-              </select>
-            </div>
-            <div class="m-side">
-              <label for="kCount">Kinder</label>
-              <select id="kCount" name="kinder">
-                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-                <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-              </select>
-            </div>
-
-            <div id="k1" class="child-age-field m-side"><label class="req">Alter Kind 1</label><input type="number" name="alter_k1" min="0" max="17"></div>
-            <div id="k2" class="child-age-field m-side"><label class="req">Alter Kind 2</label><input type="number" name="alter_k2" min="0" max="17"></div>
-            <div id="k3" class="child-age-field m-side"><label class="req">Alter Kind 3</label><input type="number" name="alter_k3" min="0" max="17"></div>
-            <div id="k4" class="child-age-field m-side"><label class="req">Alter Kind 4</label><input type="number" name="alter_k4" min="0" max="17"></div>
-            <div id="k5" class="child-age-field m-side"><label class="req">Alter Kind 5</label><input type="number" name="alter_k5" min="0" max="17"></div>
-
-            <div class="m-side">
-              <label class="req" for="vorname">Vorname</label>
-              <input type="text" id="vorname" name="vorname" required="">
-              <div class="field-error" id="errVorname">Bitte Vorname eingeben.</div>
-            </div>
-            <div class="m-side">
-              <label class="req" for="nachname">Nachname</label>
-              <input type="text" id="nachname" name="nachname" required="">
-              <div class="field-error" id="errNachname">Bitte Nachname eingeben.</div>
-            </div>
-
-            <div class="full-width">
-              <label class="req" for="email">E-Mail</label>
-              <input type="email" id="email" name="email" required="">
-              <div class="field-error" id="errEmail">Bitte gültige E-Mail-Adresse eingeben.</div>
-            </div>
-
-            <div class="full-width">
-              <label class="req">Telefon</label>
-              <div class="phone-row">
-                <select id="phonePrefix" name="phone_prefix">
-                  <option value="0049">🇩🇪 +49</option>
-                  <option value="0043">🇦🇹 +43</option>
-                  <option value="0039">🇮🇹 +39</option>
-                  <option value="0041">🇨🇭 +41</option>
-                  <option value="0031">🇳🇱 +31</option>
-                  <option value="0032">🇧🇪 +32</option>
-                  <option value="0033">🇫🇷 +33</option>
-                  <option value="0044">🇬🇧 +44</option>
-                  <option value="0048">🇵🇱 +48</option>
-                  <option value="0045">🇩🇰 +45</option>
-                  <option value="0046">🇸🇪 +46</option>
-                  <option value="0047">🇳🇴 +47</option>
-                  <option value="00420">🇨🇿 +420</option>
-                  <option value="001">🇺🇸 +1</option>
-                </select>
-                <input type="tel" id="phoneNumber" name="phone_number" placeholder="151 234 56789" inputmode="numeric" pattern="[0-9 ]*">
-              </div>
-              <div class="field-error" id="errTelefon">Bitte Telefonnummer eingeben.</div>
-            </div>
-
-            <div class="full-width">
-              <label for="nachricht">Nachricht (optional)</label>
-              <textarea id="nachricht" name="nachricht" rows="3"></textarea>
-            </div>
-
-            <div class="privacy-row">
-              <input type="checkbox" id="privacy" name="privacy" required="">
-              <label for="privacy">Ich habe die <a href="https://www.trinnerhof.com/datenschutz/" target="_blank">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *</label>
-            </div>
-            <div class="field-error full-width" id="errPrivacy" style="margin-top:-8px;">Bitte Datenschutzbestimmungen akzeptieren.</div>
-
-            <div class="success-msg" id="successMsg">&#10003; Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet.<br>Wir melden uns so schnell wie möglich bei Ihnen.</div>
-            <button type="submit" class="submit-btn" id="sBtn">Unverbindliche Anfrage senden</button>
-          </form>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <div class="footer-links">
+          <a href="tel:+390472412238">+39 0472 412238</a>
+          <a href="mailto:info@trinnerhof.com">info@trinnerhof.com</a>
+          <a href="#bookingForm">Anfrage senden</a>
+          <a href="https://www.trinnerhof.com/anfahrt/" target="_blank" rel="noopener">Anfahrt</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══════════ FOOTER ═══════════ -->
-<footer class="lp-footer">
-  <div class="lp-footer-inner">
-    <div>
-      <div class="footer-logo">
-        <img src="https://www.trinnerhof.com/wp-content/uploads/LogoN2-trinnerhof.png" alt="Trinnerhof" />
+    <div class="footer-bottom">
+      <span>&copy; 2026 Trinnerhof &middot; Familie Jaist &middot; Natz-Schabs, Südtirol &middot; MwSt.Nr.: 02743170215</span>
+      <div class="footer-legal">
+        <a href="https://www.trinnerhof.com/impressum/" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://www.trinnerhof.com/datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
       </div>
-      <p class="footer-tagline">Urlaub am Bauernhof in Südtirol –<br>denkmalgeschützter Erbhof in Natz-Schabs, Eisacktal.</p>
-    </div>
-    <div class="footer-col">
-      <span class="footer-col-title">Kontakt</span>
-      <a href="tel:+390472412238">+39 0472 412238</a>
-      <a href="mailto:info@trinnerhof.com">info@trinnerhof.com</a>
-      <p>Michael-Pacher-Str. 74</p>
-      <p>I-39040 Natz-Schabs</p>
-      <p>Eisacktal · Südtirol</p>
-    </div>
-    <div class="footer-col">
-      <span class="footer-col-title">Rechtliches</span>
-      <a href="https://www.trinnerhof.com/impressum/" target="_blank">Impressum</a>
-      <a href="https://www.trinnerhof.com/datenschutz/" target="_blank">Datenschutz</a>
-      <p style="margin-top:8px; font-size:.76rem;">MwSt.Nr.: 02743170215</p>
-      <p style="font-size:.76rem;">CIN: IT021057B53AUXEPK2</p>
-    </div>
-  </div>
-  <div class="lp-footer-inner" style="margin-top: 0; padding-top: 0; border-top: 1px solid rgba(255,255,255,.08);">
-    <div class="footer-bottom" style="grid-column: span 3; text-align: center; border: none; padding-top: 22px;">
-      © 2025 Trinnerhof · Familie Jaist · Natz-Schabs, Südtirol
     </div>
   </div>
 </footer>
 
-<!-- ═══════════ SCRIPTS ═══════════ -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script>
 <script>
-// Header scroll
-window.addEventListener('scroll', function() {
-  document.getElementById('lpHeader').classList.toggle('solid', window.scrollY > 60);
-});
+// Sticky header
+(function(){
+  var h=document.getElementById('site-header');
+  window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+})();
 
-// Tabs
-document.querySelectorAll('.unit-tab').forEach(function(tab) {
-  tab.addEventListener('click', function() {
-    document.querySelectorAll('.unit-tab').forEach(function(t){ t.classList.remove('active'); });
-    document.querySelectorAll('.unit-panel').forEach(function(p){ p.classList.remove('active'); });
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+// Fade-up
+(function(){
+  var els=document.querySelectorAll('.fade-up');
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.10,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){obs.observe(el);});
+})();
+
+// Accordion
+(function(){
+  var tiles=document.querySelectorAll('.acc-tile');
+  tiles.forEach(function(t){t.addEventListener('click',function(){tiles.forEach(function(x){if(x!==t)x.classList.remove('active');});t.classList.toggle('active');});});
+})();
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    var target=document.querySelector(id);
+    if(target){e.preventDefault();var offset=document.getElementById('site-header').offsetHeight+16;window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-offset,behavior:'smooth'});}
   });
 });
 
-// Form logic
-document.addEventListener("DOMContentLoaded", function () {
-  var API_URL    = "https://dashboard.outofthebox-media.com/api/lead";
-  var HOTEL_SLUG = "fwg-trinnerhof";
-  var UTM_KEY    = "guestflow_utm";
+// Room Slider
+(function(){
+  var track=document.getElementById('sliderTrack');
+  var dots=document.querySelectorAll('.slider-dot');
+  var btnP=document.getElementById('slidePrev');
+  var btnN=document.getElementById('slideNext');
+  var numEl=document.getElementById('slideCurrentNum');
+  var total=dots.length, curr=0;
+  function goTo(i){curr=(i+total)%total;track.style.transform='translateX(-'+(curr*100)+'%)';dots.forEach(function(d,idx){d.classList.toggle('active',idx===curr);});if(numEl)numEl.textContent=curr+1;}
+  btnP.addEventListener('click',function(){goTo(curr-1);});
+  btnN.addEventListener('click',function(){goTo(curr+1);});
+  dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.index));});});
+  var startX=0;
+  track.addEventListener('touchstart',function(e){startX=e.changedTouches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>40){if(dx<0)goTo(curr+1);else goTo(curr-1);}},{passive:true});
+  var autoTimer=setInterval(function(){goTo(curr+1);},6000);
+  document.getElementById('roomSlider').addEventListener('mouseenter',function(){clearInterval(autoTimer);});
+})();
 
-  (function captureUtm() {
-    var p=new URLSearchParams(window.location.search),src=p.get("utm_source")||"",med=p.get("utm_medium")||"",gcl=p.get("gclid")||"";
-    if(src||med||gcl){
-      var content=p.get("utm_content")||"",device="";
-      if(content.indexOf("_")!==-1) device=content.substring(content.lastIndexOf("_")+1);
-      try{localStorage.setItem(UTM_KEY,JSON.stringify({utm_source:src,utm_medium:med,utm_campaign:p.get("utm_campaign")||"",utm_term:p.get("utm_term")||"",utm_content:content,device:device,gclid:gcl,gad_source:p.get("gad_source")||"",gad_campaignid:p.get("gad_campaignid")||""}));}catch(e){}
-    }
-  })();
+// Booking Form
+document.addEventListener("DOMContentLoaded",function(){
+  var API_URL="https://dashboard.outofthebox-media.com/api/lead";
+  var HOTEL_SLUG="fwg-trinnerhof";
+  var UTM_KEY="guestflow_utm";
+  (function captureUtm(){var p=new URLSearchParams(window.location.search),src=p.get("utm_source")||"",med=p.get("utm_medium")||"",gcl=p.get("gclid")||"";if(src||med||gcl){var content=p.get("utm_content")||"",device="";if(content.indexOf("_")!==-1)device=content.substring(content.lastIndexOf("_")+1);try{localStorage.setItem(UTM_KEY,JSON.stringify({utm_source:src,utm_medium:med,utm_campaign:p.get("utm_campaign")||"",utm_term:p.get("utm_term")||"",utm_content:content,device:device,gclid:gcl,gad_source:p.get("gad_source")||"",gad_campaignid:p.get("gad_campaignid")||""}));}catch(e){}}})();
   function getUtm(){try{return JSON.parse(localStorage.getItem(UTM_KEY)||"{}");}catch(e){return{};}}
-
   var aP=flatpickr("#ankunft",{locale:"de",dateFormat:"d.m.Y",minDate:"today",onChange:function(d){if(!d[0])return;var next=new Date(d[0]);next.setDate(next.getDate()+1);bP.set("minDate",next);if(!bP.selectedDates[0]||bP.selectedDates[0]<=d[0])bP.setDate(next);}});
   var bP=flatpickr("#abreise",{locale:"de",dateFormat:"d.m.Y",minDate:"today"});
-
   document.getElementById("kCount").addEventListener("change",function(){var n=parseInt(this.value);for(var i=1;i<=5;i++){var f=document.getElementById("k"+i),inp=f.querySelector("input");if(i<=n){f.style.display="block";inp.required=true;}else{f.style.display="none";inp.required=false;inp.value="";}}});
   document.getElementById("phoneNumber").addEventListener("input",function(){this.value=this.value.replace(/[^0-9 ]/g,"");});
-
-  function buildPhone(){var prefix=document.getElementById("phonePrefix").value,number=document.getElementById("phoneNumber").value;number=number.replace(/\s/g,"").replace(/^0+/,"");return prefix+number;}
+  function buildPhone(){var prefix=document.getElementById("phonePrefix").value,number=document.getElementById("phoneNumber").value.replace(/\s/g,"").replace(/^0+/,"");return prefix+number;}
   function toIsoDate(raw){if(!raw)return"";var m=raw.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);if(m)return m[3]+"-"+m[2].padStart(2,"0")+"-"+m[1].padStart(2,"0");return raw;}
   function showError(id,show){var el=document.getElementById(id);if(el)el.style.display=show?"block":"none";}
   function markField(id,error){var el=document.getElementById(id);if(el){if(error)el.classList.add("error");else el.classList.remove("error");}}
-
   function validate(){
     var ok=true;
     var ankunft=document.getElementById("ankunft").value;showError("errAnkunft",!ankunft);markField("ankunft",!ankunft);if(!ankunft)ok=false;
@@ -941,28 +998,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var email=document.getElementById("email").value.trim();var emailOk=email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);showError("errEmail",!emailOk);markField("email",!emailOk);if(!emailOk)ok=false;
     var phoneNum=document.getElementById("phoneNumber").value.replace(/\s/g,"");showError("errTelefon",!phoneNum);document.getElementById("phoneNumber").classList.toggle("error",!phoneNum);if(!phoneNum)ok=false;
     var kinder=parseInt(document.getElementById("kCount").value)||0;
-    for(var i=1;i<=kinder;i++){var ai=document.querySelector("[name='alter_k"+i+"']");var aok=ai&&ai.value!==""&&parseInt(ai.value)>=0;if(ai){if(!aok)ai.classList.add("error");else ai.classList.remove("error");}if(!aok)ok=false;}
+    for(var i=1;i<=kinder;i++){var ageInp=document.querySelector("[name='alter_k"+i+"']");var ageOk=ageInp&&ageInp.value!==""&&parseInt(ageInp.value)>=0;if(ageInp){if(!ageOk)ageInp.classList.add("error");else ageInp.classList.remove("error");}if(!ageOk)ok=false;}
     var privacy=document.getElementById("privacy").checked;showError("errPrivacy",!privacy);if(!privacy)ok=false;
     return ok;
   }
-
   document.getElementById("bookingForm").addEventListener("submit",function(e){
     e.preventDefault();if(!validate())return;
-    var btn=document.getElementById("sBtn");btn.innerText="Sende…";btn.disabled=true;
+    var btn=document.getElementById("sBtn");btn.textContent="Sende …";btn.disabled=true;
     var kinder=parseInt(document.getElementById("kCount").value)||0,ages=[];
     for(var i=1;i<=kinder;i++){var v=document.querySelector("[name='alter_k"+i+"']");if(v&&v.value!=="")ages.push(v.value);}
     var utm=getUtm();
-    var payload={hotel_slug:HOTEL_SLUG,firstname:document.getElementById("vorname").value.trim(),lastname:document.getElementById("nachname").value.trim(),email:document.getElementById("email").value.trim(),phone:buildPhone(),checkin:toIsoDate(document.getElementById("ankunft").value),checkout:toIsoDate(document.getElementById("abreise").value),adults:parseInt(document.getElementById("erwachsene").value)||2,children:kinder,children_ages:ages.join(", "),message:document.getElementById("nachricht").value.trim(),room_type:"",language:"DE",utm_source:utm.utm_source||"",utm_medium:utm.utm_medium||"",utm_campaign:utm.utm_campaign||"",utm_term:utm.utm_term||"",utm_content:utm.utm_content||"",device:utm.device||"",gclid:utm.gclid||"",gad_source:utm.gad_source||"",gad_campaignid:utm.gad_campaignid||""};
+    var payload={hotel_slug:HOTEL_SLUG,firstname:document.getElementById("vorname").value.trim(),lastname:document.getElementById("nachname").value.trim(),email:document.getElementById("email").value.trim(),phone:buildPhone(),checkin:toIsoDate(document.getElementById("ankunft").value),checkout:toIsoDate(document.getElementById("abreise").value),adults:parseInt(document.getElementById("erwachsene").value)||2,children:kinder,children_ages:ages.join(", "),message:document.getElementById("nachricht").value.trim(),room_type:document.getElementById("zimmerTyp").value||"",language:"DE",utm_source:utm.utm_source||"",utm_medium:utm.utm_medium||"",utm_campaign:utm.utm_campaign||"",utm_term:utm.utm_term||"",utm_content:utm.utm_content||"",device:utm.device||"",gclid:utm.gclid||"",gad_source:utm.gad_source||"",gad_campaignid:utm.gad_campaignid||""};
     fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
     .then(function(r){return r.json();})
     .then(function(data){
-      if(data&&data.success){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:"form_lead_success",form_data:{guests:payload.adults,lead_id:data.id,device:payload.device}});document.getElementById("successMsg").style.display="block";btn.style.display="none";try{localStorage.removeItem(UTM_KEY);}catch(e){}}
-      else{alert("Fehler beim Senden. Bitte versuchen Sie es nochmals.");btn.innerText="Unverbindliche Anfrage senden";btn.disabled=false;}
+      if(data&&data.success){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:"form_lead_success",form_data:{room:payload.room_type,guests:payload.adults,lead_id:data.id,device:payload.device}});document.getElementById("successMsg").style.display="block";btn.style.display="none";try{localStorage.removeItem(UTM_KEY);}catch(e){}}
+      else{alert("Fehler beim Senden. Bitte versucht es nochmals.");btn.textContent="Unverbindliche Anfrage senden";btn.disabled=false;}
     })
-    .catch(function(){alert("Netzwerkfehler. Bitte versuchen Sie es nochmals.");btn.innerText="Unverbindliche Anfrage senden";btn.disabled=false;});
+    .catch(function(){alert("Netzwerkfehler. Bitte versucht es nochmals.");btn.textContent="Unverbindliche Anfrage senden";btn.disabled=false;});
   });
 });
 </script>
-
 </body>
 </html>
